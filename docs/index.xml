@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>Ian R. McDonald Ph.D. Website</title>
+    <link>https://github.com/ianrmcdonald/irm_2021</link>
+    <atom:link href="https://github.com/ianrmcdonald/irm_2021/index.xml" rel="self" type="application/rss+xml"/>
+    <description>Content from Ian R. McDonald
+</description>
+    <image>
+      <title>Ian R. McDonald Ph.D. Website</title>
+      <url>https://github.com/ianrmcdonald/irm_2021/logo.png</url>
+      <link>https://github.com/ianrmcdonald/irm_2021</link>
+    </image>
+    <generator>Distill</generator>
+    <lastBuildDate>Tue, 27 Apr 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Rounding Errors: New York, Montana, and House Apportionment in 2020</title>
+      <dc:creator>Ian McDonald</dc:creator>
+      <link>https://github.com/ianrmcdonald/irm_2021/posts/2021-03-29-new-york-and-house-apportionment-in-2020</link>
+      <description>Does apportionment have a small state bias?</description>
+      <category>reapportionment</category>
+      <category>voting</category>
+      <guid>https://github.com/ianrmcdonald/irm_2021/posts/2021-03-29-new-york-and-house-apportionment-in-2020</guid>
+      <pubDate>Tue, 27 Apr 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://github.com/ianrmcdonald/irm_2021/posts/2021-03-29-new-york-and-house-apportionment-in-2020/images/seats_minus_quota.png" medium="image" type="image/png" width="1252" height="773"/>
+    </item>
+    <item>
+      <title>Oregon Precincts Map: 2020 Election</title>
+      <dc:creator>Ian McDonald</dc:creator>
+      <link>https://github.com/ianrmcdonald/irm_2021/posts/2021-05-06 Oregon Precincts Map</link>
+      <description>A Leaflet map of Oregon precincts and the 2020 US presidential election.</description>
+      <category>maps</category>
+      <category>voting</category>
+      <category>Oregon politics</category>
+      <guid>https://github.com/ianrmcdonald/irm_2021/posts/2021-05-06 Oregon Precincts Map</guid>
+      <pubDate>Wed, 10 Mar 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://github.com/ianrmcdonald/irm_2021/posts/2021-05-06 Oregon Precincts Map/distill-preview.png" medium="image" type="image/png" width="1248" height="768"/>
+    </item>
+  </channel>
+</rss>
