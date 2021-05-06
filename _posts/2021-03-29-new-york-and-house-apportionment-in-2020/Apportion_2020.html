@@ -1,0 +1,2260 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+  <meta name="generator" content="distill" />
+
+  <style type="text/css">
+  /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
+  body {
+    visibility: hidden;
+  }
+  </style>
+
+ <!--radix_placeholder_import_source-->
+ <!--/radix_placeholder_import_source-->
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ad0000; } /* Alert */
+code span.an { color: #5e5e5e; } /* Annotation */
+code span.at { color: #20794d; } /* Attribute */
+code span.bn { color: #ad0000; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007ba5; } /* ControlFlow */
+code span.ch { color: #20794d; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #5e5e5e; } /* Comment */
+code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+code span.dt { color: #ad0000; } /* DataType */
+code span.dv { color: #ad0000; } /* DecVal */
+code span.er { color: #ad0000; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #ad0000; } /* Float */
+code span.fu { color: #4758ab; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #5e5e5e; } /* Information */
+code span.kw { color: #007ba5; } /* Keyword */
+code span.op { color: #5e5e5e; } /* Operator */
+code span.ot { color: #007ba5; } /* Other */
+code span.pp { color: #ad0000; } /* Preprocessor */
+code span.sc { color: #20794d; } /* SpecialChar */
+code span.ss { color: #20794d; } /* SpecialString */
+code span.st { color: #20794d; } /* String */
+code span.va { color: #111111; } /* Variable */
+code span.vs { color: #20794d; } /* VerbatimString */
+code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
+  <!--radix_placeholder_meta_tags-->
+  <title>Rounding Errors: New York, Montana, and House Apportionment in 2020</title>
+
+  <meta property="description" itemprop="description" content="Does apportionment have a small state bias?"/>
+
+
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2021-04-27"/>
+  <meta property="article:created" itemprop="dateCreated" content="2021-04-27"/>
+  <meta name="article:author" content="Ian McDonald"/>
+
+  <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
+  <meta property="og:title" content="Rounding Errors: New York, Montana, and House Apportionment in 2020"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:description" content="Does apportionment have a small state bias?"/>
+  <meta property="og:locale" content="en_US"/>
+
+  <!--  https://dev.twitter.com/cards/types/summary -->
+  <meta property="twitter:card" content="summary"/>
+  <meta property="twitter:title" content="Rounding Errors: New York, Montana, and House Apportionment in 2020"/>
+  <meta property="twitter:description" content="Does apportionment have a small state bias?"/>
+
+  <!--/radix_placeholder_meta_tags-->
+  <!--radix_placeholder_rmarkdown_metadata-->
+
+  <script type="text/json" id="radix-rmarkdown-metadata">
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","preview","author","date","output","categories"]}},"value":[{"type":"character","attributes":{},"value":["Rounding Errors: New York, Montana, and House Apportionment in 2020"]},{"type":"character","attributes":{},"value":["Does apportionment have a small state bias?\n"]},{"type":"character","attributes":{},"value":["images/seats_minus_quota.png"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Ian McDonald"]},{"type":"character","attributes":{},"value":["http://www.ianrmcdonald.com"]}]}]},{"type":"character","attributes":{},"value":["04-27-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["reapportionment","voting"]}]}
+  </script>
+  <!--/radix_placeholder_rmarkdown_metadata-->
+  
+  <script type="text/json" id="radix-resource-manifest">
+  {"type":"character","attributes":{},"value":["Apportion_2020_files/anchor-4.2.2/anchor.min.js","Apportion_2020_files/bowser-1.9.3/bowser.min.js","Apportion_2020_files/distill-2.2.21/template.v2.js","Apportion_2020_files/figure-html5/unnamed-chunk-3-1.png","Apportion_2020_files/figure-html5/unnamed-chunk-6-1.png","Apportion_2020_files/figure-html5/unnamed-chunk-9-1.png","Apportion_2020_files/header-attrs-2.6/header-attrs.js","Apportion_2020_files/jquery-1.11.3/jquery.min.js","Apportion_2020_files/popper-2.6.0/popper.min.js","Apportion_2020_files/tippy-6.2.7/tippy-bundle.umd.min.js","Apportion_2020_files/tippy-6.2.7/tippy-light-border.css","Apportion_2020_files/tippy-6.2.7/tippy.css","Apportion_2020_files/tippy-6.2.7/tippy.umd.min.js","Apportion_2020_files/webcomponents-2.0.0/webcomponents.js","Apportion_2020.pdf","data/~$hist_pop_revised.xlsx","data/c1940.csv","data/c2010br-08.pdf","data/census backup/2010 Census Apportionment Results_files/1","data/census backup/2010 Census Apportionment Results_files/8DCFX-TQ8VD-TWDGB-7ETWJ-HY5CJ","data/census backup/2010 Census Apportionment Results_files/analytics.js","data/census backup/2010 Census Apportionment Results_files/analytics(1).js","data/census backup/2010 Census Apportionment Results_files/AppMeasurement_Module_ActivityMap.min.js","data/census backup/2010 Census Apportionment Results_files/AppMeasurement.min.js","data/census backup/2010 Census Apportionment Results_files/bootstrap.css","data/census backup/2010 Census Apportionment Results_files/bootstrap.js","data/census backup/2010 Census Apportionment Results_files/census-css.css","data/census backup/2010 Census Apportionment Results_files/census-fonts.css","data/census backup/2010 Census Apportionment Results_files/census-js.js","data/census backup/2010 Census Apportionment Results_files/census-pattern-library.css","data/census backup/2010 Census Apportionment Results_files/clientlibs.css","data/census backup/2010 Census Apportionment Results_files/clientlibs.js","data/census backup/2010 Census Apportionment Results_files/clientlibs(1).js","data/census backup/2010 Census Apportionment Results_files/clientlibs(2).js","data/census backup/2010 Census Apportionment Results_files/common-site.css","data/census backup/2010 Census Apportionment Results_files/common-site.js","data/census backup/2010 Census Apportionment Results_files/component.js","data/census backup/2010 Census Apportionment Results_files/component(1).js","data/census backup/2010 Census Apportionment Results_files/component(2).js","data/census backup/2010 Census Apportionment Results_files/component(3).js","data/census backup/2010 Census Apportionment Results_files/component(4).js","data/census backup/2010 Census Apportionment Results_files/component(5).js","data/census backup/2010 Census Apportionment Results_files/component(6).js","data/census backup/2010 Census Apportionment Results_files/core-overrides.css","data/census backup/2010 Census Apportionment Results_files/external-link.svg","data/census backup/2010 Census Apportionment Results_files/fbevents.js","data/census backup/2010 Census Apportionment Results_files/granite.js","data/census backup/2010 Census Apportionment Results_files/icon-tables.png","data/census backup/2010 Census Apportionment Results_files/icon-tables(1).png","data/census backup/2010 Census Apportionment Results_files/icon-tables(2).png","data/census backup/2010 Census Apportionment Results_files/jquery-1.4.2.min.js","data/census backup/2010 Census Apportionment Results_files/jquery.css","data/census backup/2010 Census Apportionment Results_files/jquery.js","data/census backup/2010 Census Apportionment Results_files/jquery(1).js","data/census backup/2010 Census Apportionment Results_files/jsapi","data/census backup/2010 Census Apportionment Results_files/launch-ENdc1ca6bab15e46a5b880a2c3f9d462ab.min.js","data/census backup/2010 Census Apportionment Results_files/modern.js","data/census backup/2010 Census Apportionment Results_files/modernizr.js","data/census backup/2010 Census Apportionment Results_files/orionicons.css","data/census backup/2010 Census Apportionment Results_files/pdf.svg","data/census backup/2010 Census Apportionment Results_files/print.css","data/census backup/2010 Census Apportionment Results_files/ratingtool.css","data/census backup/2010 Census Apportionment Results_files/ratingtool.js","data/census backup/2010 Census Apportionment Results_files/RCf578b991dc4240cd85475171726bd899-source.min.js","data/census backup/2010 Census Apportionment Results_files/saved_resource.html","data/census backup/2010 Census Apportionment Results_files/teaser.js","data/census backup/2010 Census Apportionment Results_files/thumbsdown.png","data/census backup/2010 Census Apportionment Results_files/thumbsup.png","data/census backup/2010 Census Apportionment Results_files/Universal-Federated-Analytics-Min.js","data/census backup/2010 Census Apportionment Results_files/universalheader.js","data/census backup/2010 Census Apportionment Results_files/USCENSUS_IDENTITY_SOLO_White_2in_TM.svg","data/census backup/2010 Census Apportionment Results_files/utils.js","data/census backup/2010 Census Apportionment Results_files/xls.svg","data/census backup/2010 Census Apportionment Results.htm","data/census backup/Apportionment Legislation 1890 - Present - History - U.S. Census Bureau.html","data/census backup/ApportionmentPopulation2010.xls","data/census backup/c1940.pdf","data/census backup/c1950.pdf","data/census backup/c1960.pdf","data/census backup/c1970.pdf","data/census backup/c1980.pdf","data/census backup/c1990.pdf","data/census backup/transmittal package 2000.xls","data/check.xlsx","data/eds population data/apportionment1_1940Pop.pdf","data/eds population data/apportionment1_1950Pop.pdf","data/eds population data/apportionment1_1960Pop.pdf","data/eds population data/apportionment1_1970Pop.pdf","data/eds population data/apportionment1_1980PopFixed.pdf","data/eds population data/apportionment1_1990Pop.pdf","data/eds population data/apportionment1_2000Pop.pdf","data/eds population data/apportionment1_5_Official2010PressPackage-2.pdf","data/eds population data/apportionment1_5_Official2010PressPackage.pdf","data/eds population data/CD-apportionment-1789-2010.pdf","data/hist_apportion.xlsx","data/hist_pop_revised.csv","data/hist_pop_revised.xlsx","data/hist_pop.csv","data/hist_pop.xlsx","data/nst-est2020_revised.xlsx","data/nst-est2020.xls","data/nst-est2020.xlsx","data/pop2019.csv","data/popest_2020_12_22.csv","data/state_names.csv","data/state_names.xlsx","data/tabula-c2010br-08.csv","data/tweak_denominator.xlsx","images/seats_minus_quota.png","tables/main.xlsx","tables/table_1.csv","tables/table_2.csv"]}
+  </script>
+  <!--radix_placeholder_navigation_in_header-->
+  <!--/radix_placeholder_navigation_in_header-->
+  <!--radix_placeholder_distill-->
+
+  <style type="text/css">
+
+  body {
+    background-color: white;
+  }
+
+  .pandoc-table {
+    width: 100%;
+  }
+
+  .pandoc-table>caption {
+    margin-bottom: 10px;
+  }
+
+  .pandoc-table th:not([align]) {
+    text-align: left;
+  }
+
+  .pagedtable-footer {
+    font-size: 15px;
+  }
+
+  d-byline .byline {
+    grid-template-columns: 2fr 2fr;
+  }
+
+  d-byline .byline h3 {
+    margin-block-start: 1.5em;
+  }
+
+  d-byline .byline .authors-affiliations h3 {
+    margin-block-start: 0.5em;
+  }
+
+  .authors-affiliations .orcid-id {
+    width: 16px;
+    height:16px;
+    margin-left: 4px;
+    margin-right: 4px;
+    vertical-align: middle;
+    padding-bottom: 2px;
+  }
+
+  d-title .dt-tags {
+    margin-top: 1em;
+    grid-column: text;
+  }
+
+  .dt-tags .dt-tag {
+    text-decoration: none;
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0em 0.4em;
+    margin-right: 0.5em;
+    margin-bottom: 0.4em;
+    font-size: 70%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  d-article table.gt_table td,
+  d-article table.gt_table th {
+    border-bottom: none;
+  }
+
+  .html-widget {
+    margin-bottom: 2.0em;
+  }
+
+  .l-screen-inset {
+    padding-right: 16px;
+  }
+
+  .l-screen .caption {
+    margin-left: 10px;
+  }
+
+  .shaded {
+    background: rgb(247, 247, 247);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .shaded .html-widget {
+    margin-bottom: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .shaded .shaded-content {
+    background: white;
+  }
+
+  .text-output {
+    margin-top: 0;
+    line-height: 1.5em;
+  }
+
+  .hidden {
+    display: none !important;
+  }
+
+  d-article {
+    padding-top: 2.5rem;
+    padding-bottom: 30px;
+  }
+
+  d-appendix {
+    padding-top: 30px;
+  }
+
+  d-article>p>img {
+    width: 100%;
+  }
+
+  d-article h2 {
+    margin: 1rem 0 1.5rem 0;
+  }
+
+  d-article h3 {
+    margin-top: 1.5rem;
+  }
+
+  d-article iframe {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 2.0em;
+    width: 100%;
+  }
+
+  /* Tweak code blocks */
+
+  d-article div.sourceCode code,
+  d-article pre code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: auto;
+  }
+
+  d-article div.sourceCode {
+    background-color: white;
+  }
+
+  d-article div.sourceCode pre {
+    padding-left: 10px;
+    font-size: 12px;
+    border-left: 2px solid rgba(0,0,0,0.1);
+  }
+
+  d-article pre {
+    font-size: 12px;
+    color: black;
+    background: none;
+    margin-top: 0;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  d-article pre a {
+    border-bottom: none;
+  }
+
+  d-article pre a:hover {
+    border-bottom: none;
+    text-decoration: underline;
+  }
+
+  d-article details {
+    grid-column: text;
+    margin-bottom: 0.8em;
+  }
+
+  @media(min-width: 768px) {
+
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: visible !important;
+  }
+
+  d-article div.sourceCode pre {
+    padding-left: 18px;
+    font-size: 14px;
+  }
+
+  d-article pre {
+    font-size: 14px;
+  }
+
+  }
+
+  figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+
+  /* CSS for d-contents */
+
+  .d-contents {
+    grid-column: text;
+    color: rgba(0,0,0,0.8);
+    font-size: 0.9em;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+    padding-left: 0.25em;
+    justify-self: start;
+  }
+
+  @media(min-width: 1000px) {
+    .d-contents.d-contents-float {
+      height: 0;
+      grid-column-start: 1;
+      grid-column-end: 4;
+      justify-self: center;
+      padding-right: 3em;
+      padding-left: 2em;
+    }
+  }
+
+  .d-contents nav h3 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+
+  .d-contents li {
+    list-style-type: none
+  }
+
+  .d-contents nav > ul {
+    padding-left: 0;
+  }
+
+  .d-contents ul {
+    padding-left: 1em
+  }
+
+  .d-contents nav ul li {
+    margin-top: 0.6em;
+    margin-bottom: 0.2em;
+  }
+
+  .d-contents nav a {
+    font-size: 13px;
+    border-bottom: none;
+    text-decoration: none
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  .d-contents nav a:hover {
+    text-decoration: underline solid rgba(0, 0, 0, 0.6)
+  }
+
+  .d-contents nav > ul > li > a {
+    font-weight: 600;
+  }
+
+  .d-contents nav > ul > li > ul {
+    font-weight: inherit;
+  }
+
+  .d-contents nav > ul > li > ul > li {
+    margin-top: 0.2em;
+  }
+
+
+  .d-contents nav ul {
+    margin-top: 0;
+    margin-bottom: 0.25em;
+  }
+
+  .d-article-with-toc h2:nth-child(2) {
+    margin-top: 0;
+  }
+
+
+  /* Figure */
+
+  .figure {
+    position: relative;
+    margin-bottom: 2.5em;
+    margin-top: 1.5em;
+  }
+
+  .figure img {
+    width: 100%;
+  }
+
+  .figure .caption {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+    line-height: 1.5em;
+  }
+
+  .figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+
+  .figure .caption a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .figure .caption b,
+  .figure .caption strong, {
+    font-weight: 600;
+    color: rgba(0, 0, 0, 1.0);
+  }
+
+  /* Citations */
+
+  d-article .citation {
+    color: inherit;
+    cursor: inherit;
+  }
+
+  div.hanging-indent{
+    margin-left: 1em; text-indent: -1em;
+  }
+
+  /* Citation hover box */
+
+  .tippy-box[data-theme~=light-border] {
+    background-color: rgba(250, 250, 250, 0.95);
+  }
+
+  .tippy-content > p {
+    margin-bottom: 0;
+    padding: 2px;
+  }
+
+
+  /* Tweak 1000px media break to show more text */
+
+  @media(min-width: 1000px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 80px [middle-start] 50px [text-start kicker-end] 65px 65px 65px 65px 65px 65px 65px 65px [text-end gutter-start] 65px [middle-end] 65px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 16px;
+    }
+
+    .grid {
+      grid-column-gap: 16px;
+    }
+
+    d-article {
+      font-size: 1.06rem;
+      line-height: 1.7em;
+    }
+    figure .caption, .figure .caption, figure figcaption {
+      font-size: 13px;
+    }
+  }
+
+  @media(min-width: 1180px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 60px [middle-start] 60px [text-start kicker-end] 60px 60px 60px 60px 60px 60px 60px 60px [text-end gutter-start] 60px [middle-end] 60px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 32px;
+    }
+
+    .grid {
+      grid-column-gap: 32px;
+    }
+  }
+
+
+  /* Get the citation styles for the appendix (not auto-injected on render since
+     we do our own rendering of the citation appendix) */
+
+  d-appendix .citation-appendix,
+  .d-appendix .citation-appendix {
+    font-size: 11px;
+    line-height: 15px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 18px;
+    border: 1px solid rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.02);
+    padding: 10px 18px;
+    border-radius: 3px;
+    color: rgba(150, 150, 150, 1);
+    overflow: hidden;
+    margin-top: -12px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  /* Include appendix styles here so they can be overridden */
+
+  d-appendix {
+    contain: layout style;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-top: 60px;
+    margin-bottom: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0,0,0,0.5);
+    padding-top: 60px;
+    padding-bottom: 48px;
+  }
+
+  d-appendix h3 {
+    grid-column: page-start / text-start;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 1em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.65);
+  }
+
+  d-appendix h3 + * {
+    margin-top: 1em;
+  }
+
+  d-appendix ol {
+    padding: 0 0 0 15px;
+  }
+
+  @media (min-width: 768px) {
+    d-appendix ol {
+      padding: 0 0 0 30px;
+      margin-left: -30px;
+    }
+  }
+
+  d-appendix li {
+    margin-bottom: 1em;
+  }
+
+  d-appendix a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  d-appendix > * {
+    grid-column: text;
+  }
+
+  d-appendix > d-footnote-list,
+  d-appendix > d-citation-list,
+  d-appendix > distill-appendix {
+    grid-column: screen;
+  }
+
+  /* Include footnote styles here so they can be overridden */
+
+  d-footnote-list {
+    contain: layout style;
+  }
+
+  d-footnote-list > * {
+    grid-column: text;
+  }
+
+  d-footnote-list a.footnote-backlink {
+    color: rgba(0,0,0,0.3);
+    padding-left: 0.5em;
+  }
+
+
+
+  /* Anchor.js */
+
+  .anchorjs-link {
+    /*transition: all .25s linear; */
+    text-decoration: none;
+    border-bottom: none;
+  }
+  *:hover > .anchorjs-link {
+    margin-left: -1.125em !important;
+    text-decoration: none;
+    border-bottom: none;
+  }
+
+  /* Social footer */
+
+  .social_footer {
+    margin-top: 30px;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.67);
+  }
+
+  .disqus-comments {
+    margin-right: 30px;
+  }
+
+  .disqus-comment-count {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+
+  #disqus_thread {
+    margin-top: 30px;
+  }
+
+  .article-sharing a {
+    border-bottom: none;
+    margin-right: 8px;
+  }
+
+  .article-sharing a:hover {
+    border-bottom: none;
+  }
+
+  .sidebar-section.subscribe {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+
+  .subscribe p {
+    margin-bottom: 0.5em;
+  }
+
+
+  .article-footer .subscribe {
+    font-size: 15px;
+    margin-top: 45px;
+  }
+
+
+  .sidebar-section.custom {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+
+  .custom p {
+    margin-bottom: 0.5em;
+  }
+
+  /* Styles for listing layout (hide title) */
+  .layout-listing d-title, .layout-listing .d-title {
+    display: none;
+  }
+
+  /* Styles for posts lists (not auto-injected) */
+
+
+  .posts-with-sidebar {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  .posts-list .description h2,
+  .posts-list .description p {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  }
+
+  .posts-list .description h2 {
+    font-weight: 700;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .posts-list h2.post-tag {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 12px;
+  }
+  .posts-list {
+    margin-top: 60px;
+    margin-bottom: 24px;
+  }
+
+  .posts-list .post-preview {
+    text-decoration: none;
+    overflow: hidden;
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 24px 0;
+  }
+
+  .post-preview-last {
+    border-bottom: none !important;
+  }
+
+  .posts-list .posts-list-caption {
+    grid-column: screen;
+    font-weight: 400;
+  }
+
+  .posts-list .post-preview h2 {
+    margin: 0 0 6px 0;
+    line-height: 1.2em;
+    font-style: normal;
+    font-size: 24px;
+  }
+
+  .posts-list .post-preview p {
+    margin: 0 0 12px 0;
+    line-height: 1.4em;
+    font-size: 16px;
+  }
+
+  .posts-list .post-preview .thumbnail {
+    box-sizing: border-box;
+    margin-bottom: 24px;
+    position: relative;
+    max-width: 500px;
+  }
+  .posts-list .post-preview img {
+    width: 100%;
+    display: block;
+  }
+
+  .posts-list .metadata {
+    font-size: 12px;
+    line-height: 1.4em;
+    margin-bottom: 18px;
+  }
+
+  .posts-list .metadata > * {
+    display: inline-block;
+  }
+
+  .posts-list .metadata .publishedDate {
+    margin-right: 2em;
+  }
+
+  .posts-list .metadata .dt-authors {
+    display: block;
+    margin-top: 0.3em;
+    margin-right: 2em;
+  }
+
+  .posts-list .dt-tags {
+    display: block;
+    line-height: 1em;
+  }
+
+  .posts-list .dt-tags .dt-tag {
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0.3em 0.4em;
+    margin-right: 0.2em;
+    margin-bottom: 0.4em;
+    font-size: 60%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .posts-list img {
+    opacity: 1;
+  }
+
+  .posts-list img[data-src] {
+    opacity: 0;
+  }
+
+  .posts-more {
+    clear: both;
+  }
+
+
+  .posts-sidebar {
+    font-size: 16px;
+  }
+
+  .posts-sidebar h3 {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .sidebar-section {
+    margin-bottom: 30px;
+  }
+
+  .categories ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .categories li {
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 0;
+  }
+
+  .categories li>a {
+    border-bottom: none;
+  }
+
+  .categories li>a:hover {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  }
+
+  .categories .active {
+    font-weight: 600;
+  }
+
+  .categories .category-count {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+
+  @media(min-width: 768px) {
+    .posts-list .post-preview h2 {
+      font-size: 26px;
+    }
+    .posts-list .post-preview .thumbnail {
+      float: right;
+      width: 30%;
+      margin-bottom: 0;
+    }
+    .posts-list .post-preview .description {
+      float: left;
+      width: 45%;
+    }
+    .posts-list .post-preview .metadata {
+      float: left;
+      width: 20%;
+      margin-top: 8px;
+    }
+    .posts-list .post-preview p {
+      margin: 0 0 12px 0;
+      line-height: 1.5em;
+      font-size: 16px;
+    }
+    .posts-with-sidebar .posts-list {
+      float: left;
+      width: 75%;
+    }
+    .posts-with-sidebar .posts-sidebar {
+      float: right;
+      width: 20%;
+      margin-top: 60px;
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+  }
+
+
+  /* Improve display for browsers without grid (IE/Edge <= 15) */
+
+  .downlevel {
+    line-height: 1.6em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+  }
+
+  .downlevel .d-title {
+    padding-top: 6rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .downlevel .d-title h1 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.1em;
+    margin: 0 0 0.5rem;
+  }
+
+  .downlevel .d-title p {
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.55em;
+    margin-top: 0;
+  }
+
+  .downlevel .d-byline {
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    font-size: 0.8rem;
+    line-height: 1.8em;
+  }
+
+  .downlevel .section-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .downlevel .d-article {
+    font-size: 1.06rem;
+    line-height: 1.7em;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+
+
+  .downlevel .d-appendix {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: none;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.5);
+    padding-top: 40px;
+    padding-bottom: 48px;
+  }
+
+  .downlevel .footnotes ol {
+    padding-left: 13px;
+  }
+
+  .downlevel .base-grid,
+  .downlevel .distill-header,
+  .downlevel .d-title,
+  .downlevel .d-abstract,
+  .downlevel .d-article,
+  .downlevel .d-appendix,
+  .downlevel .distill-appendix,
+  .downlevel .d-byline,
+  .downlevel .d-footnote-list,
+  .downlevel .d-citation-list,
+  .downlevel .distill-footer,
+  .downlevel .appendix-bottom,
+  .downlevel .posts-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media(min-width: 768px) {
+    .downlevel .base-grid,
+    .downlevel .distill-header,
+    .downlevel .d-title,
+    .downlevel .d-abstract,
+    .downlevel .d-article,
+    .downlevel .d-appendix,
+    .downlevel .distill-appendix,
+    .downlevel .d-byline,
+    .downlevel .d-footnote-list,
+    .downlevel .d-citation-list,
+    .downlevel .distill-footer,
+    .downlevel .appendix-bottom,
+    .downlevel .posts-container {
+    padding-left: 150px;
+    padding-right: 150px;
+    max-width: 900px;
+  }
+  }
+
+  .downlevel pre code {
+    display: block;
+    border-left: 2px solid rgba(0, 0, 0, .1);
+    padding: 0 0 0 20px;
+    font-size: 14px;
+  }
+
+  .downlevel code, .downlevel pre {
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  .downlevel .posts-list .post-preview {
+    color: inherit;
+  }
+
+
+
+  </style>
+
+  <script type="application/javascript">
+
+  function is_downlevel_browser() {
+    if (bowser.isUnsupportedBrowser({ msie: "12", msedge: "16"},
+                                   window.navigator.userAgent)) {
+      return true;
+    } else {
+      return window.load_distill_framework === undefined;
+    }
+  }
+
+  // show body when load is complete
+  function on_load_complete() {
+
+    // add anchors
+    if (window.anchors) {
+      window.anchors.options.placement = 'left';
+      window.anchors.add('d-article > h2, d-article > h3, d-article > h4, d-article > h5');
+    }
+
+
+    // set body to visible
+    document.body.style.visibility = 'visible';
+
+    // force redraw for leaflet widgets
+    if (window.HTMLWidgets) {
+      var maps = window.HTMLWidgets.findAll(".leaflet");
+      $.each(maps, function(i, el) {
+        var map = this.getMap();
+        map.invalidateSize();
+        map.eachLayer(function(layer) {
+          if (layer instanceof L.TileLayer)
+            layer.redraw();
+        });
+      });
+    }
+
+    // trigger 'shown' so htmlwidgets resize
+    $('d-article').trigger('shown');
+  }
+
+  function init_distill() {
+
+    init_common();
+
+    // create front matter
+    var front_matter = $('<d-front-matter></d-front-matter>');
+    $('#distill-front-matter').wrap(front_matter);
+
+    // create d-title
+    $('.d-title').changeElementType('d-title');
+
+    // create d-byline
+    var byline = $('<d-byline></d-byline>');
+    $('.d-byline').replaceWith(byline);
+
+    // create d-article
+    var article = $('<d-article></d-article>');
+    $('.d-article').wrap(article).children().unwrap();
+
+    // move posts container into article
+    $('.posts-container').appendTo($('d-article'));
+
+    // create d-appendix
+    $('.d-appendix').changeElementType('d-appendix');
+
+    // flag indicating that we have appendix items
+    var appendix = $('.appendix-bottom').children('h3').length > 0;
+
+    // replace footnotes with <d-footnote>
+    $('.footnote-ref').each(function(i, val) {
+      appendix = true;
+      var href = $(this).attr('href');
+      var id = href.replace('#', '');
+      var fn = $('#' + id);
+      var fn_p = $('#' + id + '>p');
+      fn_p.find('.footnote-back').remove();
+      var text = fn_p.html();
+      var dtfn = $('<d-footnote></d-footnote>');
+      dtfn.html(text);
+      $(this).replaceWith(dtfn);
+    });
+    // remove footnotes
+    $('.footnotes').remove();
+
+    // move refs into #references-listing
+    $('#references-listing').replaceWith($('#refs'));
+
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      var id = $(this).attr('id');
+      $('.d-contents a[href="#' + id + '"]').parent().remove();
+      appendix = true;
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('d-appendix'));
+    });
+
+    // show d-appendix if we have appendix content
+    $("d-appendix").css('display', appendix ? 'grid' : 'none');
+
+    // localize layout chunks to just output
+    $('.layout-chunk').each(function(i, val) {
+
+      // capture layout
+      var layout = $(this).attr('data-layout');
+
+      // apply layout to markdown level block elements
+      var elements = $(this).children().not('details, div.sourceCode, pre, script');
+      elements.each(function(i, el) {
+        var layout_div = $('<div class="' + layout + '"></div>');
+        if (layout_div.hasClass('shaded')) {
+          var shaded_content = $('<div class="shaded-content"></div>');
+          $(this).wrap(shaded_content);
+          $(this).parent().wrap(layout_div);
+        } else {
+          $(this).wrap(layout_div);
+        }
+      });
+
+
+      // unwrap the layout-chunk div
+      $(this).children().unwrap();
+    });
+
+    // remove code block used to force  highlighting css
+    $('.distill-force-highlighting-css').parent().remove();
+
+    // remove empty line numbers inserted by pandoc when using a
+    // custom syntax highlighting theme
+    $('code.sourceCode a:empty').remove();
+
+    // load distill framework
+    load_distill_framework();
+
+    // wait for window.distillRunlevel == 4 to do post processing
+    function distill_post_process() {
+
+      if (!window.distillRunlevel || window.distillRunlevel < 4)
+        return;
+
+      // hide author/affiliations entirely if we have no authors
+      var front_matter = JSON.parse($("#distill-front-matter").html());
+      var have_authors = front_matter.authors && front_matter.authors.length > 0;
+      if (!have_authors)
+        $('d-byline').addClass('hidden');
+
+      // article with toc class
+      $('.d-contents').parent().addClass('d-article-with-toc');
+
+      // strip links that point to #
+      $('.authors-affiliations').find('a[href="#"]').removeAttr('href');
+
+      // add orcid ids
+      $('.authors-affiliations').find('.author').each(function(i, el) {
+        var orcid_id = front_matter.authors[i].orcidID;
+        if (orcid_id) {
+          var a = $('<a></a>');
+          a.attr('href', 'https://orcid.org/' + orcid_id);
+          var img = $('<img></img>');
+          img.addClass('orcid-id');
+          img.attr('alt', 'ORCID ID');
+          img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
+          a.append(img);
+          $(this).append(a);
+        }
+      });
+
+      // hide elements of author/affiliations grid that have no value
+      function hide_byline_column(caption) {
+        $('d-byline').find('h3:contains("' + caption + '")').parent().css('visibility', 'hidden');
+      }
+
+      // affiliations
+      var have_affiliations = false;
+      for (var i = 0; i<front_matter.authors.length; ++i) {
+        var author = front_matter.authors[i];
+        if (author.affiliation !== "&nbsp;") {
+          have_affiliations = true;
+          break;
+        }
+      }
+      if (!have_affiliations)
+        $('d-byline').find('h3:contains("Affiliations")').css('visibility', 'hidden');
+
+      // published date
+      if (!front_matter.publishedDate)
+        hide_byline_column("Published");
+
+      // document object identifier
+      var doi = $('d-byline').find('h3:contains("DOI")');
+      var doi_p = doi.next().empty();
+      if (!front_matter.doi) {
+        // if we have a citation and valid citationText then link to that
+        if ($('#citation').length > 0 && front_matter.citationText) {
+          doi.html('Citation');
+          $('<a href="#citation"></a>')
+            .text(front_matter.citationText)
+            .appendTo(doi_p);
+        } else {
+          hide_byline_column("DOI");
+        }
+      } else {
+        $('<a></a>')
+           .attr('href', "https://doi.org/" + front_matter.doi)
+           .html(front_matter.doi)
+           .appendTo(doi_p);
+      }
+
+       // change plural form of authors/affiliations
+      if (front_matter.authors.length === 1) {
+        var grid = $('.authors-affiliations');
+        grid.children('h3:contains("Authors")').text('Author');
+        grid.children('h3:contains("Affiliations")').text('Affiliation');
+      }
+
+      // remove d-appendix and d-footnote-list local styles
+      $('d-appendix > style:first-child').remove();
+      $('d-footnote-list > style:first-child').remove();
+
+      // move appendix-bottom entries to the bottom
+      $('.appendix-bottom').appendTo('d-appendix').children().unwrap();
+      $('.appendix-bottom').remove();
+
+      // hoverable references
+      $('span.citation[data-cites]').each(function() {
+        var refHtml = $('#ref-' + $(this).attr('data-cites')).html();
+        window.tippy(this, {
+          allowHTML: true,
+          content: refHtml,
+          maxWidth: 500,
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start'
+        });
+      });
+
+      // clear polling timer
+      clearInterval(tid);
+
+      // show body now that everything is ready
+      on_load_complete();
+    }
+
+    var tid = setInterval(distill_post_process, 50);
+    distill_post_process();
+
+  }
+
+  function init_downlevel() {
+
+    init_common();
+
+     // insert hr after d-title
+    $('.d-title').after($('<hr class="section-separator"/>'));
+
+    // check if we have authors
+    var front_matter = JSON.parse($("#distill-front-matter").html());
+    var have_authors = front_matter.authors && front_matter.authors.length > 0;
+
+    // manage byline/border
+    if (!have_authors)
+      $('.d-byline').remove();
+    $('.d-byline').after($('<hr class="section-separator"/>'));
+    $('.d-byline a').remove();
+
+    // remove toc
+    $('.d-contents').remove();
+
+    // move appendix elements
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('.d-appendix'));
+    });
+
+
+    // inject headers into references and footnotes
+    var refs_header = $('<h3></h3>');
+    refs_header.text('References');
+    $('#refs').prepend(refs_header);
+
+    var footnotes_header = $('<h3></h3');
+    footnotes_header.text('Footnotes');
+    $('.footnotes').children('hr').first().replaceWith(footnotes_header);
+
+    // move appendix-bottom entries to the bottom
+    $('.appendix-bottom').appendTo('.d-appendix').children().unwrap();
+    $('.appendix-bottom').remove();
+
+    // remove appendix if it's empty
+    if ($('.d-appendix').children().length === 0)
+      $('.d-appendix').remove();
+
+    // prepend separator above appendix
+    $('.d-appendix').before($('<hr class="section-separator" style="clear: both"/>'));
+
+    // trim code
+    $('pre>code').each(function(i, val) {
+      $(this).html($.trim($(this).html()));
+    });
+
+    // move posts-container right before article
+    $('.posts-container').insertBefore($('.d-article'));
+
+    $('body').addClass('downlevel');
+
+    on_load_complete();
+  }
+
+
+  function init_common() {
+
+    // jquery plugin to change element types
+    (function($) {
+      $.fn.changeElementType = function(newType) {
+        var attrs = {};
+
+        $.each(this[0].attributes, function(idx, attr) {
+          attrs[attr.nodeName] = attr.nodeValue;
+        });
+
+        this.replaceWith(function() {
+          return $("<" + newType + "/>", attrs).append($(this).contents());
+        });
+      };
+    })(jQuery);
+
+    // prevent underline for linked images
+    $('a > img').parent().css({'border-bottom' : 'none'});
+
+    // mark non-body figures created by knitr chunks as 100% width
+    $('.layout-chunk').each(function(i, val) {
+      var figures = $(this).find('img, .html-widget');
+      if ($(this).attr('data-layout') !== "l-body") {
+        figures.css('width', '100%');
+      } else {
+        figures.css('max-width', '100%');
+        figures.filter("[width]").each(function(i, val) {
+          var fig = $(this);
+          fig.css('width', fig.attr('width') + 'px');
+        });
+
+      }
+    });
+
+    // auto-append index.html to post-preview links in file: protocol
+    // and in rstudio ide preview
+    $('.post-preview').each(function(i, val) {
+      if (window.location.protocol === "file:")
+        $(this).attr('href', $(this).attr('href') + "index.html");
+    });
+
+    // get rid of index.html references in header
+    if (window.location.protocol !== "file:") {
+      $('.distill-site-header a[href]').each(function(i,val) {
+        $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+      });
+    }
+
+    // add class to pandoc style tables
+    $('tr.header').parent('thead').parent('table').addClass('pandoc-table');
+    $('.kable-table').children('table').addClass('pandoc-table');
+
+    // add figcaption style to table captions
+    $('caption').parent('table').addClass("figcaption");
+
+    // initialize posts list
+    if (window.init_posts_list)
+      window.init_posts_list();
+
+    // implmement disqus comment link
+    $('.disqus-comment-count').click(function() {
+      window.headroom_prevent_pin = true;
+      $('#disqus_thread').toggleClass('hidden');
+      if (!$('#disqus_thread').hasClass('hidden')) {
+        var offset = $(this).offset();
+        $(window).resize();
+        $('html, body').animate({
+          scrollTop: offset.top - 35
+        });
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    if (is_downlevel_browser())
+      init_downlevel();
+    else
+      window.addEventListener('WebComponentsReady', init_distill);
+  });
+
+  </script>
+
+  <!--/radix_placeholder_distill-->
+  <script src="Apportion_2020_files/header-attrs-2.6/header-attrs.js"></script>
+  <script src="Apportion_2020_files/jquery-1.11.3/jquery.min.js"></script>
+  <script src="Apportion_2020_files/popper-2.6.0/popper.min.js"></script>
+  <link href="Apportion_2020_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="Apportion_2020_files/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="Apportion_2020_files/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="Apportion_2020_files/anchor-4.2.2/anchor.min.js"></script>
+  <script src="Apportion_2020_files/bowser-1.9.3/bowser.min.js"></script>
+  <script src="Apportion_2020_files/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="Apportion_2020_files/distill-2.2.21/template.v2.js"></script>
+  <!--radix_placeholder_site_in_header-->
+  <!--/radix_placeholder_site_in_header-->
+
+
+</head>
+
+<body>
+
+<!--radix_placeholder_front_matter-->
+
+<script id="distill-front-matter" type="text/json">
+{"title":"Rounding Errors: New York, Montana, and House Apportionment in 2020","description":"Does apportionment have a small state bias?","authors":[{"author":"Ian McDonald","authorURL":"http://www.ianrmcdonald.com","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-04-27T00:00:00.000+00:00","citationText":"McDonald, 2021"}
+</script>
+
+<!--/radix_placeholder_front_matter-->
+<!--radix_placeholder_navigation_before_body-->
+<!--/radix_placeholder_navigation_before_body-->
+<!--radix_placeholder_site_before_body-->
+<!--/radix_placeholder_site_before_body-->
+
+<div class="d-title">
+<h1>Rounding Errors: New York, Montana, and House Apportionment in 2020</h1>
+<!--radix_placeholder_categories-->
+<div class="dt-tags">
+<div class="dt=tag">reapportionment</div>
+<div class="dt=tag">voting</div>
+</div>
+<!--/radix_placeholder_categories-->
+<p><p>Does apportionment have a small state bias?</p></p>
+</div>
+
+<div class="d-byline">
+  Ian McDonald <a href="http://www.ianrmcdonald.com" class="uri">http://www.ianrmcdonald.com</a> 
+  
+<br/>04-27-2021
+</div>
+
+<div class="d-article">
+<p><strong>UPDATE Apr 26</strong></p>
+<p>The results are in, and I will post some analysis shortly, but some comments about the discussion below:</p>
+<ul>
+<li><p>I listened to the Census spokesperson at the news conference who said New York missed keeping ALL of its seats by 89 residents. I thought she must have meant 89,000. Later, I learned that in 1970, Oregon came up short by 230 people, and Utah in 2000 was famously was short by 856 (and would have won an extra seat but for the absence of missionaries). But every other year, the miss by the state with the “436th” seat was several thousand. I would be surprised if this result is not litigated by New York, but arguably there’s no real political payoff challenging it.</p></li>
+<li><p>The thesis below (Montana won a seat at New York’s expense) was essentially validated, except for the fact that New York missed its 27th seat rather than its 26th. Montana’s quota was 1.42 and they still won the 2nd seat. New York’s quota was 26.56 and only gets 26 seats. New York 2020 is 6th in the all time “screwed by Huntington Hill” list, instead of 2nd as I projected.</p></li>
+<li><p>Ohio is a second populous state that was denied its quota by a significant amount: it gets 15 seats with a quota of 15.51. No other state was close to New York and Ohio in that regard.</p></li>
+<li><p>More widely reported is Rhode Island’s surprise success, surprisingly keeping its second seat for another ten years. Their quota was 1.44, which makes them “Montana-esque”.</p></li>
+<li><p>New York and New Jersey exceeded the December estimates by more than 4.5 percent. Rhode Island was higher by 3.78 percent, and Hawaii, Vermont, Alabama, Maryland, and Massachusetts were higher by 2 percent or more. That list, except for Alabama, is sapphire blue. The median was Virginia at +0.7, and Arizona went <em>down</em> by 3,54 percent. These estimates came just four months ago. Very strange and needs to be explained by someone.</p></li>
+</ul>
+<p>Here’s the original pre-announcement post:</p>
+<p><strong>Sunday evening, <a href="https://twitter.com/Redistrict">Dave Wasserman of the Cook Politcal Report</a> tweeted a late estimate of the soon-to-be-revealed reapportionment from the 2020 Census. Currently, he sees this <a href="https://twitter.com/Redistrict/status/1386542093703729152">breakdown of state gains and losses:</a></strong></p>
+<p><strong>TX +3</strong> <strong>FL +2</strong> <strong>AZ, CO, MT, NC, OR +1</strong></p>
+<p><strong>AL, CA, IL, MI, MN, NY, OH, PA, RI, WV -1</strong></p>
+<p><strong>His prediction ties with the apportionment we would have seen from the Census’s late December estimates, with one exception: Alabama would remain at 7, while New York would lose two and drop to 25.</strong></p>
+<p><strong>I argue that a potential loss of two New York seats, combined with Montana’s gain of one seat, demonstrates a persistent and needless small-state bias in the apportionment rounding process that dates back to the 1940 census.</strong></p>
+<p>Last December, <a href="https://www.politico.com/news/2020/12/30/census-bureau-deadline-missed-452584">reports appeared</a> about delays in final 2020 Census apportionment for the US House, which also changes state distribution of electors for the Electoral College. New population estimates were published on December 22, and they project New York will lose two of its current 27 seats. In 2019, New York was projected to lose one seat, but not two.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>Once the Census determines the country’s population, apportionment should be simple. Proportionality is the only constitutional requirement, aside from a guarantee of one representative for each state. The Institute for Social Research at the University of Michigan provides an <a href="https://isr.umich.edu/apportionment-calculator-for-us-census/">easy-to-use apportionment calculator</a> based on any population input.</p>
+<p>Virtually all the controversy about apportionment involves the population count. But rounding also introduces additional problems, and rounding formulas can bias the result. This year, Montana could be the beneficiary of a quirk in the rounding process, while New York could be victimized.</p>
+<p>The currently used formula for the US House, known as the Huntington-Hill Method, was enacted in 1941. This formula creates a small but consistent bias for less populous states.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<h3 id="the-quota-the-starting-point-for-reapportionment">The Quota: the Starting Point for Reapportionment</h3>
+<p>Each state’s seat is driven by its <em>quota</em>:</p>
+<p><span class="math display">\[
+Quota_{state} = \frac{\text{State Population}}{\text{US Population}} \times 435
+\]</span></p>
+<p>The quota uses a simple and intuitive computation. But it also includes a fractional remainder, and the apportionment scheme must somehow round the result to a whole number.</p>
+<p>Using December’s population estimate, New York’s seat quota would be:</p>
+<p><span class="math display">\[
+\text{New York Quota} = \frac{19,336,776}{328,771,307} \times 435 \approx 25.59
+\]</span></p>
+<p>Montana’s quota would be:</p>
+<p><span class="math display">\[
+\text{Montana Quota}  = \frac{1,080,577}{328,771,307} \times 435 \approx 1.43
+\]</span> How does the process round these quotas into whole numbers? We presume that New York will round to either 25 or 26, and Montana rounds to 1 or 2 <a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+<p>In the ordinary sense of the word “round”, we draw a line at .5. Any value with a remainder above the lower integer is rounded up, and a remainder below .5 is rounded down. Using this definition, New York rounds up from 25.59 to 26 and Montana rounds down from 1.43 to 1.</p>
+<p>But if we use the current apportionment formula and the December estimate, New York gets only 25 seats, while Montana would get 2. How is that possible?</p>
+<h3 id="webster-huntington-hill-and-the-method-of-equal-proportions">Webster, Huntington-Hill, and the Method of Equal Proportions</h3>
+<p>The apportionment rounding problem is well documented, full of surprising wrinkles, and inherent in any proportional seat allocation method. Solutions for the rounding problem in the U.S. House date back to the 1790’s, and were associated with statesmen, including Hamilton, Jefferson, John Quincy Adams, and Daniel Webster.</p>
+<p>In the decades before the 1940’s, Congress used a formula designed by Webster based on earlier work by Hamilton.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
+<p>The Webster formula applies our starting intuition that the allocation should round up when the remainder is greater than .5, and round down if the remainder is less. But the formula must also determine how to guarantee the sum of the rounded allocations equals 435.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></p>
+<p>The fractional remainders are unpredictable and rounding can throw off the sum. To demonstrate, suppose that the US is comprised of three states instead of 50 (and let’s say they are California, Oregon, and Washington). Using the Webster method and the new 2020 estimates, we see this result:</p>
+<div class="layout-chunk" data-layout="l-body">
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">State</th>
+<th style="text-align: right;">Population</th>
+<th style="text-align: right;">Pop Pct</th>
+<th style="text-align: right;">Quota</th>
+<th style="text-align: right;">Seats</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">California</td>
+<td style="text-align: right;">39,368,078</td>
+<td style="text-align: right;">76.7</td>
+<td style="text-align: right;">333.8</td>
+<td style="text-align: right;">334</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Oregon</td>
+<td style="text-align: right;">4,241,507</td>
+<td style="text-align: right;">8.3</td>
+<td style="text-align: right;">36.0</td>
+<td style="text-align: right;">36</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Washington</td>
+<td style="text-align: right;">7,693,612</td>
+<td style="text-align: right;">15.0</td>
+<td style="text-align: right;">65.2</td>
+<td style="text-align: right;">65</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Total</td>
+<td style="text-align: right;">51,303,197</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">435.0</td>
+<td style="text-align: right;">435</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>In this particular case, the rounded whole numbers add to 435, and we are finished.</p>
+<p>But suppose we alter the population figures slightly. If the fractional remainders are distributed differently, the number of seats may add to a number greater or less than 435.</p>
+<p>If we alter the quota formula for some adjustment, we can drive the total to the desired level. Some states will give up a seat while others are left alone.</p>
+<p><span class="math display">\[
+\text{Adjusted Quota}_{state} = \frac{\text{State Population}}{\text{US Population + Adjustment}} \times 435
+\]</span></p>
+<p>In the example below, the initial quotas generate a seat total of 436. By gradually increasing the denominator (adding to the total population), one state’s fractional remainder will eventually drop below .5.<br />
+When the denominator in the quota formula is increased by 26,780, California’s quota drops a hair below 334.5. Washington’s quota and Oregon’s quota drop too, but their fractional remainders don’t cross the .5 threshold.</p>
+<div class="layout-chunk" data-layout="l-body">
+<table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 8%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 11%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">State</th>
+<th style="text-align: right;">Population</th>
+<th style="text-align: right;">Pop Pct</th>
+<th style="text-align: right;">Initial Quota</th>
+<th style="text-align: right;">Initial Seats</th>
+<th style="text-align: right;">Adjustment</th>
+<th style="text-align: right;">Adjusted Quota</th>
+<th style="text-align: right;">Adjusted Seats</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">California</td>
+<td style="text-align: right;">40,479,078</td>
+<td style="text-align: right;">76.9</td>
+<td style="text-align: right;">334.67</td>
+<td style="text-align: right;">335</td>
+<td style="text-align: right;">26,780</td>
+<td style="text-align: right;">334.50</td>
+<td style="text-align: right;">334</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Oregon</td>
+<td style="text-align: right;">4,441,507</td>
+<td style="text-align: right;">8.4</td>
+<td style="text-align: right;">36.72</td>
+<td style="text-align: right;">37</td>
+<td style="text-align: right;">26,780</td>
+<td style="text-align: right;">36.70</td>
+<td style="text-align: right;">37</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Washington</td>
+<td style="text-align: right;">7,693,612</td>
+<td style="text-align: right;">14.6</td>
+<td style="text-align: right;">63.61</td>
+<td style="text-align: right;">64</td>
+<td style="text-align: right;">26,780</td>
+<td style="text-align: right;">63.58</td>
+<td style="text-align: right;">64</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Total</td>
+<td style="text-align: right;">52,614,197</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">435.00</td>
+<td style="text-align: right;">436</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">435</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Simple enough, but the Webster method, and the Hamilton method that preceded it, produced some well known paradoxes and quirks that were more apparent when the number of seats routinely increased from census to census.</p>
+<p>In 1880, we saw that Alabama would lose seats as a direct result of hypothetically increasing the total number of House seats, a result famously known as the Alabama Paradox. A related problem known as the Population Paradox was observed in 1902 when using the Hamilton formula (which is similar to the Webster formula), Virginia would have lost seats to Maine even though Virginia’s population increased by a greater percentage. <a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a></p>
+<p>In order to prevent these scenarios, Congress replaced the Webster method in 1941 by a design by statistician Joseph Hill and adapted by Harvard mathematician Edward Huntington.</p>
+<p>The Huntington-Hill formula ignores the .5 rounding threshold and instead uses the geometric mean of the two whole numbers closest to the state’s quota. The geometric mean of two consecutive integers is the square root of their product, and the rounding threshold ranges between .414 and .5.</p>
+<p><span class="math display">\[
+\text{For two consecutive whole numbers, the geometric mean =} 
+\sqrt{n\times(n+1))}
+\]</span></p>
+<p>If the quota exceeds the geometric mean, we round up, and if not, we round down.</p>
+<p>Small states have much smaller geometric means, compared to large states.</p>
+<h3 id="example-a-state-with-a-quota-of-3.48">Example: A state with a quota of 3.48</h3>
+<p>We might think of the .5 threshold determined by the arithmetic mean between the two whole numbers surrounding a quota; if a state’s quota is 3.48, the two surrounding whole numbers are 3 and 4.</p>
+<p>The arithmetic mean of 3 and 4 is 3.5. The geometric mean of 3 and 4 is approximately 3.46. Again, the Webster method uses the arithmetic mean and Huntington-Hill uses the geometric mean.^[</p>
+<p>If <span class="math inline">\(n\)</span> = the lower of the two whole numbers surrounding the quota.</p>
+<p><span class="math display">\[
+\text{For two consecutive whole numbers, the arithmetic mean of n and n+1 =} 
+(2n + 1)/2
+\]</span> The fractional remainder of the arithmetic mean is always .5.</p>
+<p><strong>Since the quota of 3.48 falls below 3.5, the Webster method would round down to 3 seats.</strong></p>
+<p>The geometric mean of two consecutive integers is the square root of their product, and the remainder ranges between .414 and .5.</p>
+<p><span class="math display">\[
+\text{For two consecutive whole numbers, the geometric mean =} 
+\sqrt{n\times(n+1))}
+\]</span> The geometric mean of 3 and 4 is</p>
+<p><span class="math display">\[
+\sqrt{3\times(4))} = \sqrt{12} \approx 3.464
+\]</span></p>
+<p><strong>Since the quota of 3.48 in the example is greater than 3.464, the Huntington-Hill method rounds <em>up</em> to 4 seats.</strong></p>
+<p>The Huntington-Hill method reduces the likelihood of the Alabama Paradox and the Population Paradox, even though the difference between the arithmetic vs. geometric means goes away as the number of seats increases and the geometric mean approaches <span class="math inline">\((n + .5)\)</span> But the difference between arithmetic vs. geometric means for states with smaller numbers of seats can be significant.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:unnamed-chunk-3"></span>
+<img src="Apportion_2020_files/figure-html5/unnamed-chunk-3-1.png" alt="Rounding thresholds for Webster and Huntington-Hill methods.  Quotas with fractional remainders in the shaded region are rounded *down* for Webster and *up* for Huntington-Hill, the method currently in use. The red dot places our example of a 3.48 quota.  The extra shaded region on the left shows the small-state bias in  Huntington-Hill" width="624" />
+<p class="caption">
+Figure 1: Rounding thresholds for Webster and Huntington-Hill methods. Quotas with fractional remainders in the shaded region are rounded <em>down</em> for Webster and <em>up</em> for Huntington-Hill, the method currently in use. The red dot places our example of a 3.48 quota. The extra shaded region on the left shows the small-state bias in Huntington-Hill
+</p>
+</div>
+</div>
+<p>The shaded area shows the region where a quota would produce different rounding results depending on the method chosen. Under today’s Huntington-Hill method, the threshold is the curved line. The likelihood of rounding up increases as the state’s relative population shrinks.</p>
+<p>Neither formula guarantees an allocation of 435 seats on the first pass. For example, in the case of the December 2020 estimate, the Huntington-Hill formula described below generates a sum of 437 representatives on before any adjustments.</p>
+<p>Huntington-Hill reduces the total seat count in the same way we saw in the three-state example: gradually increasing the denominator used to determine states’ quotas. Eventually, some states above the rounding threshold will fall below it. Thus, two states will lose a representative, which gets us to 435.</p>
+<p>For the December 2020 estimate, the two states losing seats after this adjustment are Minnesota and New York.</p>
+<p>By contrast, the Webster method gets it right on the first try with 435. That method assigns Montana 1 seat, while New York gets 26. Sometimes it gets to 435 without any adjustment, and sometimes it doesn’t.</p>
+<p>The formula documented by the U.S. Census adapts this logic in a clever way: you can generate a sequence that assigns seats by number, going all the way to 435. The result is identical and explained more completely in an addendum below.<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a></p>
+<h3 id="since-huntington-hill-was-adopted-how-many-states-have-been-penalized-as-much-as-new-york-might-be-in-the-2020-apportionment">Since Huntington-Hill was adopted, how many states have been penalized as much as New York might be in the 2020 apportionment?</h3>
+<p>Starting with 1940, 9 censuses up to 2010 have produced 446 individual state apportionments under Huntington-Hill. Only 16 of these 446 allocations rounded down a state’s apportionment with an initial quota residual greater of than .5.</p>
+<p>As the table shows, the largest residual (i.e., the state losing a seat with the biggest rounding error) was California in the 1950 census, with an extremely large fractional remainder of .722.</p>
+<p>If the current estimate holds, New York will produce second greatest seat loss, relative to its residual, since 1940.</p>
+<p>Notice that 12 of these 16 unlucky seat allocations had came from states with seat counts of 10 or more.</p>
+<div class="layout-chunk" data-layout="l-body">
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">State</th>
+<th style="text-align: left;">Year</th>
+<th style="text-align: right;">Seats</th>
+<th style="text-align: right;">Quota</th>
+<th style="text-align: right;">Residual</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">New York</td>
+<td style="text-align: left;">2020</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">25.585</td>
+<td style="text-align: right;">0.585</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Massachusetts</td>
+<td style="text-align: left;">1990</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10.532</td>
+<td style="text-align: right;">0.532</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">New Jersey</td>
+<td style="text-align: left;">1990</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">13.536</td>
+<td style="text-align: right;">0.536</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">New York</td>
+<td style="text-align: left;">1990</td>
+<td style="text-align: right;">31</td>
+<td style="text-align: right;">31.521</td>
+<td style="text-align: right;">0.521</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">California</td>
+<td style="text-align: left;">1980</td>
+<td style="text-align: right;">45</td>
+<td style="text-align: right;">45.584</td>
+<td style="text-align: right;">0.584</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Georgia</td>
+<td style="text-align: left;">1980</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10.524</td>
+<td style="text-align: right;">0.524</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Indiana</td>
+<td style="text-align: left;">1980</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10.574</td>
+<td style="text-align: right;">0.574</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Connecticut</td>
+<td style="text-align: left;">1970</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">6.505</td>
+<td style="text-align: right;">0.505</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Oregon</td>
+<td style="text-align: left;">1970</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4.501</td>
+<td style="text-align: right;">0.501</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Illinois</td>
+<td style="text-align: left;">1960</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">24.559</td>
+<td style="text-align: right;">0.559</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Massachusetts</td>
+<td style="text-align: left;">1960</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">12.543</td>
+<td style="text-align: right;">0.543</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Missouri</td>
+<td style="text-align: left;">1960</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10.524</td>
+<td style="text-align: right;">0.524</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Pennsylvania</td>
+<td style="text-align: left;">1960</td>
+<td style="text-align: right;">27</td>
+<td style="text-align: right;">27.576</td>
+<td style="text-align: right;">0.576</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">California</td>
+<td style="text-align: left;">1950</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">30.722</td>
+<td style="text-align: right;">0.722</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Kentucky</td>
+<td style="text-align: left;">1950</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">8.546</td>
+<td style="text-align: right;">0.546</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Tennessee</td>
+<td style="text-align: left;">1950</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">9.553</td>
+<td style="text-align: right;">0.553</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Compare this list with luckier states receiving an additional seat with a residual less than .5:<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a></p>
+<div class="layout-chunk" data-layout="l-body">
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">State</th>
+<th style="text-align: left;">Year</th>
+<th style="text-align: right;">Seats</th>
+<th style="text-align: right;">Quota</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Montana</td>
+<td style="text-align: left;">2020</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1.43</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Minnesota</td>
+<td style="text-align: left;">2010</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">7.48</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Rhode Island</td>
+<td style="text-align: left;">2010</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1.48</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">California</td>
+<td style="text-align: left;">2000</td>
+<td style="text-align: right;">53</td>
+<td style="text-align: right;">52.45</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">North Carolina</td>
+<td style="text-align: left;">2000</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">12.47</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Montana</td>
+<td style="text-align: left;">1970</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1.50</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">South Dakota</td>
+<td style="text-align: left;">1970</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1.44</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">New Hampshire</td>
+<td style="text-align: left;">1960</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1.48</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Nevada</td>
+<td style="text-align: left;">1950</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.46</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Arkansas</td>
+<td style="text-align: left;">1940</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">6.47</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Nevada</td>
+<td style="text-align: left;">1940</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.37</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:unnamed-chunk-6"></span>
+<img src="Apportion_2020_files/figure-html5/unnamed-chunk-6-1.png" alt="State quotas vs. fractional remainder of seat allocations.  Positive seats-minus-quota means the formula rounded up, and negative seats-minus-quota means it rounded down. The beneficiaries of a significantly positive rounding are less populous states." width="624" />
+<p class="caption">
+Figure 2: State quotas vs. fractional remainder of seat allocations. Positive seats-minus-quota means the formula rounded up, and negative seats-minus-quota means it rounded down. The beneficiaries of a significantly positive rounding are less populous states.
+</p>
+</div>
+</div>
+<p>Notice that the constitutional guarantee of one seat has rarely assigned to seat to a state with a tiny quota.<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a></p>
+<p>The second most generous seat allocation will be 2020 if the population figures hold: Montana, winning a second seat despite a small residual of .43. Both New York’s smaller apportionment and Montana’s larger one would be historic.</p>
+<h3 id="how-many-states-have-been-rewarded-with-a-bonus-as-big-as-montanas">How many states have been rewarded with a bonus as big as Montana’s?</h3>
+<p>Montana will make history for the lowest quota that yields an extra seat from Huntington-Hill. Montana is always kind of on the bubble and its Supreme Court challenge after the 1990 apportionment reflects that. But a quota below 1.5, such as Montana in 2020, rarely produces two seats.</p>
+<p>How many times has Huntington-Hill formula differred from the result generated by Webster?</p>
+<p>Nine times since 1940, one state received an extra seat thanks to Huntington-Hill while another state lost one. Usually, we see one instance per census. Each time, a seat shifts from a bigger state to a much smaller one.</p>
+<div class="layout-chunk" data-layout="l-body">
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">State</th>
+<th style="text-align: left;">Year</th>
+<th style="text-align: right;">Quota</th>
+<th style="text-align: right;">Actual</th>
+<th style="text-align: right;">Webster</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">New York</td>
+<td style="text-align: left;">2020</td>
+<td style="text-align: right;">25.58</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">26</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">North Carolina</td>
+<td style="text-align: left;">2010</td>
+<td style="text-align: right;">13.46</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">14</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Massachusetts</td>
+<td style="text-align: left;">1990</td>
+<td style="text-align: right;">10.53</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">11</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Indiana</td>
+<td style="text-align: left;">1980</td>
+<td style="text-align: right;">10.57</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">11</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Connecticut</td>
+<td style="text-align: left;">1970</td>
+<td style="text-align: right;">6.51</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">7</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Oregon</td>
+<td style="text-align: left;">1970</td>
+<td style="text-align: right;">4.50</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Massachusetts</td>
+<td style="text-align: left;">1960</td>
+<td style="text-align: right;">12.54</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">13</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">California</td>
+<td style="text-align: left;">1950</td>
+<td style="text-align: right;">30.72</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">31</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Michigan</td>
+<td style="text-align: left;">1940</td>
+<td style="text-align: right;">17.45</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">18</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">State</th>
+<th style="text-align: left;">Year</th>
+<th style="text-align: right;">Quota</th>
+<th style="text-align: right;">Actual</th>
+<th style="text-align: right;">Webster</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Montana</td>
+<td style="text-align: left;">2020</td>
+<td style="text-align: right;">1.43</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Rhode Island</td>
+<td style="text-align: left;">2010</td>
+<td style="text-align: right;">1.48</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Oklahoma</td>
+<td style="text-align: left;">1990</td>
+<td style="text-align: right;">5.52</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">New Mexico</td>
+<td style="text-align: left;">1980</td>
+<td style="text-align: right;">2.50</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Montana</td>
+<td style="text-align: left;">1970</td>
+<td style="text-align: right;">1.50</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">South Dakota</td>
+<td style="text-align: left;">1970</td>
+<td style="text-align: right;">1.44</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">New Hampshire</td>
+<td style="text-align: left;">1960</td>
+<td style="text-align: right;">1.48</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Kansas</td>
+<td style="text-align: left;">1950</td>
+<td style="text-align: right;">5.53</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Arkansas</td>
+<td style="text-align: left;">1940</td>
+<td style="text-align: right;">6.47</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">6</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:unnamed-chunk-9"></span>
+<img src="Apportion_2020_files/figure-html5/unnamed-chunk-9-1.png" alt="Instances since 1940 when Huntington-Hill and Webster assign different results by state and year" width="624" />
+<p class="caption">
+Figure 3: Instances since 1940 when Huntington-Hill and Webster assign different results by state and year
+</p>
+</div>
+</div>
+<p>Eighteen of the 446 apportions show a different result between Huntington-Hill vs. Webster from 1940-2020. The states rewarded by Huntington-Hill are all smaller than the states punished by it.</p>
+<p>Ironically, Montana contested the 1990 apportionment in court, arguing that the Huntington-Hill method unfairly denied them a second seat in 1990. Montana claimed the process should be based instead on the never-used “Dean” method.<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a> The case <em>Department of Commerce v. Montana</em> went to the Supreme Court, which decided in favor of the Huntington-Hill allocation in the 1990 census.<a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a></p>
+<p>Montana may yet become a significant beneficiary of Huntington-Hill in 2020.</p>
+<p>There is great uncertainty about the census and apportionment, and the December 2020 estimate might be inconsequential.<a href="#fn12" class="footnote-ref" id="fnref12" role="doc-noteref"><sup>12</sup></a> Even in this example stakes involve a single seat shifting from New York to Montana.</p>
+<p>Given these preliminary numbers, it’s hard to argue that Montana deserves a second House seat, The Constitution created an entire chamber dedicating to protecting an unfair numerical advantage of small states. The Senate bias is bad, and House shouldn’t make matters worse.</p>
+<h3 id="addendum-why-does-the-census-website-show-that-we-assign-individual-seats-in-order-from-51-to-435">Addendum: Why does the census website show that we assign individual seats in order from 51 to 435?</h3>
+<p>A clever way to regenerate the Huntington Hill method is described on the census, described as the method of equal proportions, and detailed here: <a href="https://www.census.gov/prod/cen2010/briefs/c2010br-08.pdf" class="uri">https://www.census.gov/prod/cen2010/briefs/c2010br-08.pdf</a></p>
+<p>The process works like this:</p>
+<ol type="1">
+<li><p>Assign one seat to every one of the states.</p></li>
+<li><p>Assign the remaining 385 seats (i.e., seats numbered 51 through 435) as follows:</p>
+<ol type="a">
+<li><p>Compute an initial “priority score” that takes the population divided by the geometric mean of 1 and 2.</p></li>
+<li><p>Every state’s initial priority score is its population / sqrt (1*2), which is its population / ~ 1.41.</p></li>
+<li><p>Identify the state with the highest priority score and assign the 51st seat to that state. Because every priority score is the same at this point, the 51st seat goes to the state with the greatest population.</p></li>
+</ol>
+<p>The 51st seats thus goes to California.</p>
+<ol start="4" type="a">
+<li><p>Reduce that state’s priority score by calculating its population divided by the geometric mean of n and n+1, where n is the new, higher number of the state’s seats</p></li>
+<li><p>For the state with the 51st seat, we now use the geometric mean 2 and 3, which is sqrt(2*3) or sqrt(6), 2.449. Its priority score goes down accordingly.</p></li>
+<li><p>Reorder the priority scores. The 52nd seat goes to the state with the newly determined high priority score. In all likelihood, the next seat goes to a different state that now has 2 seats. This year, the 52nd seat goes to Texas. Just like California, its priority score is recomputed to a lower value.</p></li>
+<li><p>Repeat steps e and f until all 435 seats have been allocated. In each iteration, the priority score is recalculated and reduced, and the state awarded a given seats (probably) moves somewhere further back in the line.</p></li>
+</ol></li>
+</ol>
+<p>Look at assignments if the continued past seat 435; we get New York at 436 and Minnesota at 437. Earlier, we saw those were the two states that lost seats when we simply altered the US population denominator.</p>
+<p>When we iterate like this, Alabama wins of the 435th seat, while New York comes in 436th. If Alabama had 6,209 fewer residents it would have traded places with New York and lost its seventh seat.</p>
+<p>So why is Montana (and not Alabama) the relevant comparison in my analysis? <em>Because Montana gets an enomrous break in the adjustment from the Webster method to Huntington-Hill.</em> Alabama, by comparison, winds up with 7 seats using either the Huntington-Hill or Webster method.</p>
+<p>Again, this is all based on a recent population estimate generated before the inauguration. The tables below show the size of population change that would drop a state below seat number 435 or move it up to that position. If the final apportionment figures show these changes, the results will change. Montana, Alabama, and New York could all produce drama when the results are announced.</p>
+<div class="layout-chunk" data-layout="l-body">
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Seat Number</th>
+<th style="text-align: left;">State</th>
+<th style="text-align: right;">Total Seats</th>
+<th style="text-align: right;">Population</th>
+<th style="text-align: right;">Loss Drops a Seat</th>
+<th style="text-align: right;">Pct to Drop Seat</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">431</td>
+<td style="text-align: left;">Montana</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1,080,577</td>
+<td style="text-align: right;">7,966</td>
+<td style="text-align: right;">0.737</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">432</td>
+<td style="text-align: left;">Illinois</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">12,587,530</td>
+<td style="text-align: right;">78,840</td>
+<td style="text-align: right;">0.626</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">433</td>
+<td style="text-align: left;">Florida</td>
+<td style="text-align: right;">29</td>
+<td style="text-align: right;">21,733,312</td>
+<td style="text-align: right;">120,792</td>
+<td style="text-align: right;">0.556</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">434</td>
+<td style="text-align: left;">Texas</td>
+<td style="text-align: right;">39</td>
+<td style="text-align: right;">29,360,759</td>
+<td style="text-align: right;">162,868</td>
+<td style="text-align: right;">0.555</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">435</td>
+<td style="text-align: left;">Alabama</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">4,921,532</td>
+<td style="text-align: right;">6,209</td>
+<td style="text-align: right;">0.126</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Seat Number</th>
+<th style="text-align: left;">State</th>
+<th style="text-align: right;">Total Seats</th>
+<th style="text-align: right;">Population</th>
+<th style="text-align: right;">Gain to Add Seat</th>
+<th style="text-align: right;">Pct to Add Seat</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">436</td>
+<td style="text-align: left;">New York</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">19,336,776</td>
+<td style="text-align: right;">24,427</td>
+<td style="text-align: right;">0.126</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">437</td>
+<td style="text-align: left;">Minnesota</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">5,657,342</td>
+<td style="text-align: right;">25,554</td>
+<td style="text-align: right;">0.452</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">438</td>
+<td style="text-align: left;">Ohio</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">11,693,217</td>
+<td style="text-align: right;">71,495</td>
+<td style="text-align: right;">0.611</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">439</td>
+<td style="text-align: left;">California</td>
+<td style="text-align: right;">52</td>
+<td style="text-align: right;">39,368,078</td>
+<td style="text-align: right;">499,080</td>
+<td style="text-align: right;">1.268</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">440</td>
+<td style="text-align: left;">Virginia</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">8,590,563</td>
+<td style="text-align: right;">134,381</td>
+<td style="text-align: right;">1.564</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<section class="footnotes" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1" role="doc-endnote"><p>See the December 2020 population estimates at <a href="https://www.census.gov/programs-surveys/popest/data/tables.html" class="uri">https://www.census.gov/programs-surveys/popest/data/tables.html</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2" role="doc-endnote"><p>In a 2001 Brookings Institute report, economist H. Peyton Young writes, “Not only is it unnecessarily complex—involving square root formulas—it demonstrably favors small states at the expense of large states.” <a href="https://www.brookings.edu/research/dividing-the-house-why-congress-should-reinstate-an-old-reapportionment-formula/" class="uri">https://www.brookings.edu/research/dividing-the-house-why-congress-should-reinstate-an-old-reapportionment-formula/</a>] See Also <a href="https://www.census.gov/programs-surveys/popest/data/tables.html" class="uri">https://www.census.gov/programs-surveys/popest/data/tables.html</a>]<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3" role="doc-endnote"><p>This expectation has a name: the Quota Rule, and we can devise a system capable of violating it. See Young, H P , Balinski, M L (2010) <em>Fair Representation: Meeting the Ideal of One Man, One Vote United States</em> Brookings Institution Press<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4" role="doc-endnote"><p>Among many excellent summaries of the history (Young 2001) a Supreme Court ruling in 1992 lays out the formula variations over time. The Court overturned a lower court ruling that reinstated a second Montana seat from the 1990 census and supported the Huntington Hill formula in use since 1941.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5" role="doc-endnote"><p>The fractional remainders of quotas should be uniformly distributed between zero and one. In practice, we can observe evaluate the distribution for uniformity using a chi-squared test.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6" role="doc-endnote"><p>Among the many explainers available, Vicki Powers published useful slide deck at <a href="http://www.mathcs.emory.edu/~vicki/talks/Apportionment_Sept2012.pdf" class="uri">http://www.mathcs.emory.edu/~vicki/talks/Apportionment_Sept2012.pdf</a>. Also see Nurmi H. (1999) <em>Paradoxes of Representation. In: Voting Paradoxes and How to Deal with Them.</em> Springer, Berlin, Heidelberg. <a href="https://doi.org/10.1007/978-3-662-03782-9_9" class="uri">https://doi.org/10.1007/978-3-662-03782-9_9</a><a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7" role="doc-endnote"><p>See the census brief that explains the apportion formula at <a href="https://www.census.gov/prod/cen2010/briefs/c2010br-08.pdf" class="uri">https://www.census.gov/prod/cen2010/briefs/c2010br-08.pdf</a>)<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8" role="doc-endnote"><p>Nevada is the only state in recent history whose entire quota fell below 0.5 (in 1940 and 1950). The Huntington-Hill formula almost mathematically guarantees such states round up to one seat, and of course, the Constitution guarantees a seat.<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn9" role="doc-endnote"><p>The geometric mean of 0 and 1 equals 1, and in any event, and in any event, Nevada in 1940 and 1950 are the only cases since 1940 where the quota fell below 0.5<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn10" role="doc-endnote"><p><a href="https://www.maa.org/press/periodicals/convergence/apportioning-representatives-in-the-united-states-congress-deans-method-of-apportionment" class="uri">https://www.maa.org/press/periodicals/convergence/apportioning-representatives-in-the-united-states-congress-deans-method-of-apportionment</a><a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn11" role="doc-endnote"><p><a href="https://www.law.cornell.edu/supct/html/91-860.ZS.html" class="uri">https://www.law.cornell.edu/supct/html/91-860.ZS.html</a><a href="#fnref11" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn12" role="doc-endnote"><p>April 26: Some surprises but Montana was the record breaking beneficiary of Huntington Hill: two seat with a 1.43 quota<a href="#fnref12" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+<!--radix_placeholder_article_footer-->
+<!--/radix_placeholder_article_footer-->
+</div>
+
+<div class="d-appendix">
+</div>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+<!--radix_placeholder_site_after_body-->
+<!--/radix_placeholder_site_after_body-->
+<!--radix_placeholder_appendices-->
+<div class="appendix-bottom"></div>
+<!--/radix_placeholder_appendices-->
+<!--radix_placeholder_navigation_after_body-->
+<!--/radix_placeholder_navigation_after_body-->
+
+</body>
+
+</html>

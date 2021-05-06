@@ -1,12 +1,31 @@
-name: "irm_2021"
-title: "Ian R. McDonald"
+name: "Ian R. McDonald, Ph.D."
+title: "Ian R. McDonald Ph.D. Website"
 description: |
-  Ian R. McDonald
-output_dir: "_site"
+  Content from Ian R. McDonald
+base_url: https://github.com/ianrmcdonald/irm_2021
+favicon: logo.png
+twitter:
+  site: "@ianrmcdonald"
+creative_commons: CC BY-NC
+repository_url: https://github.com/ianrmcdonald/irm_2021
+collections:
+  posts:
+    share: [twitter, facebook]
+    feed_items_max: false
+output_dir: "docs"
 navbar:
+  logo:
+    image: logo.png
+    href: https://twitter.com/ianrmcdonald
   right:
     - text: "Home"
       href: index.html
     - text: "About"
       href: about.html
-output: distill::distill_article
+    - icon: fa fa-github
+      href: https://github.com/ianrmcdonald/irm_2021
+    - icon: fa fa-rss
+      href: index.xml
+output:
+  distill::distill_article:
+    css: styles.css
