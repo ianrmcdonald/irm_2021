@@ -2,18 +2,17 @@
   "articles": [
     {
       "path": "about.html",
-      "title": "About this site",
-      "description": "Some additional details about the website",
+      "title": "About Ian McDonald's website",
       "author": [],
-      "contents": "\n\n\n\n",
-      "last_modified": "2021-05-06T16:34:26-07:00"
+      "contents": "\nIan McDonald has taught at Lewis & Clark College, Portland State University, and the University of Portland in Portland, Oregon. He has a Ph.D. in political science from Duke University, and studies American politics.\n\n\n\n",
+      "last_modified": "2021-05-06T19:29:15-07:00"
     },
     {
       "path": "index.html",
       "title": "Latest posts",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2021-05-06T16:34:27-07:00"
+      "last_modified": "2021-05-06T19:29:16-07:00"
     }
   ],
   "collections": ["posts/posts.json"]

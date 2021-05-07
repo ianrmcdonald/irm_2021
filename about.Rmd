@@ -1,10 +1,9 @@
 ---
-title: "About this site"
-description: |
-  Some additional details about the website
+title: "About Ian McDonald's website"
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+Ian McDonald has taught at Lewis & Clark College, Portland State University, and the University of Portland in Portland, Oregon.  He has a Ph.D. in political science from Duke University, and studies American politics. 
