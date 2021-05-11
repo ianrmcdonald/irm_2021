@@ -2,10 +2,11 @@ library(tidyverse)
 
 
 #Generates hunhill based on basic algorithm
+post_dir <- ("_posts/2021-03-29-new-york-and-house-apportionment-in-2020/")
 
-source("apportion_functions.R")
+source(str_c(post_dir, "apportion_functions.R"))
 
-hist_pop <- "data/hist_pop_revised.csv"
+hist_pop <- str_c(post_dir, "data/hist_pop_revised.csv")
 population_main <- read_csv(hist_pop) 
 
 for (i in seq(1940, 2020, by=10)) {

@@ -1,0 +1,44 @@
+---
+title: "Reapportionment Post Mortem"
+description: |
+  Yes, Montana stold a seat from New York.
+author:
+  - name: Ian McDonald
+    url: http://www.ianrmcdonald.com
+date: 05-07-2021
+output:
+  distill::distill_article:
+    self_contained: false
+draft: true
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+Before the census apportionment totals were announced, I predicted that Montana would 
+win an historic gift from the reapportionment rounding process, at the expense of New York.  The projection was close but didn't lost its 27th seat, not its 26th.  With a tiny increase in its population count New York would have kept all of its seats from the last census, defying the census's own estimate from December 2020. 
+
+Table:  Beating and missing the December estimate.
+
+Robert Gebeloff reported in the New York Times:  "...methodological differences between how the estimates are made and how the Census Bureau conducts counts may play the biggest role. For most years, the official population counts come from the Census Bureau’s Population Estimates Program, based on administrative and modeled data. Then once a decade, the Census Bureau goes out and actually counts. This usually yields discrepancies, but the gap for New York this year is much wider than normal."
+
+"That’s because the Census Bureau has methods for counting people even if a form isn’t returned, but there is no way to count people living at an address the bureau doesn’t know about."    
+
+"Starting with the 2000 census, state and local government agencies were invited to augment and make corrections to the list through the “Local Update of Census Addresses” (LUCA) program. New York City was an early adopter, and city planners were credited with giving the city a big lift in 2000 by getting hundreds of thousands of missing addresses added to the master file."
+
+"According to this data, New York’s master address list grew by 693,000 statewide, and after invalid addresses and vacant units were filtered out, the census counted population in 446,000 additional housing units compared with 2010, which could reflect both new units the census already knew about and the LUCA efforts. That’s a 6 percent increase that jibes with the 4.2 percent population growth."       
+
+Did undercounting shoot Texas and Florida in the foot?
+
+Table:  Beating and missing the rounding error
+
+Table:  Beating and missing HH vs. Webster.
+
+Table:  Estimate vs. actual effect of the 2020 electoral college map.  
+
+Maps:  Because everybody wants one.
+
+
+

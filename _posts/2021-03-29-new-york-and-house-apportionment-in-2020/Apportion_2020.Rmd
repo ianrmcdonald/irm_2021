@@ -13,6 +13,7 @@ output:
 categories:
   - reapportionment
   - voting
+draft: TRUE
 ---
 
 
@@ -145,9 +146,7 @@ Small states have much smaller geometric means, compared to large states.
 
 We might think of the .5 threshold determined by the arithmetic mean between the two whole numbers surrounding a quota; if a state's quota is 3.48, the two surrounding whole numbers are 3 and 4. 
 
-The arithmetic mean of 3 and 4 is 3.5. The geometric mean of 3 and 4 is approximately 3.46. Again, the Webster method uses the arithmetic mean and Huntington-Hill uses the geometric mean.^[  
-
-If $n$ = the lower of the two whole numbers surrounding the quota.
+The arithmetic mean of 3 and 4 is 3.5. The geometric mean of 3 and 4 is approximately 3.46. Again, the Webster method uses the arithmetic mean and Huntington-Hill uses the geometric mean.^[If $n$ = the lower of the two whole numbers surrounding the quota.]
 
 $$
 \text{For two consecutive whole numbers, the arithmetic mean of n and n+1 =} 
@@ -216,7 +215,7 @@ If the current estimate holds, New York will produce second greatest seat loss, 
 Notice that 12 of these 16 unlucky seat allocations had came from states with seat counts of 10 or more.
 
 ```{r echo=FALSE}
-load("my_work_space.RData")
+load("my_work_space_precensus.RData")
 
 library(tidycensus)
 st_codes <- fips_codes %>% 

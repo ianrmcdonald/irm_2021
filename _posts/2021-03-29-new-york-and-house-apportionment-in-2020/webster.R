@@ -1,9 +1,10 @@
 library(tidyverse)
 
-source("apportion_functions.R")
+post_dir <- ("_posts/2021-03-29-new-york-and-house-apportionment-in-2020/")
 
-hist_pop <- "data/hist_pop_revised.csv"
-population_main <- read_csv(hist_pop) 
+source(str_c(post_dir, "apportion_functions.R"))
+
+hist_pop <- str_c(post_dir, "data/hist_pop_revised.csv")
 
 for (i in seq(1920, 2020, by=10)) {
   
