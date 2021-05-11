@@ -296,11 +296,9 @@ Twenty of the 446 apportions show a different result between Huntington-Hill vs.
 
 Ironically, Montana contested the 1990 apportionment in court, arguing that the Huntington-Hill method unfairly denied them a second seat in 1990. Montana claimed the process should be based instead on the never-used "Dean" method.^[https://www.maa.org/press/periodicals/convergence/apportioning-representatives-in-the-united-states-congress-deans-method-of-apportionment]  The case *Department of Commerce v. Montana* went to the Supreme Court, which decided in favor of the Huntington-Hill allocation in the 1990 census.^[https://www.law.cornell.edu/supct/html/91-860.ZS.html]  
 
-Montana may yet become a significant beneficiary of Huntington-Hill in 2020.
+Montana became a significant beneficiary of Huntington-Hill in 2020, a development they did not forsee in the 1990's.
 
-There is great uncertainty about the census and apportionment, and the December 2020 estimate might be inconsequential.^[April 26: Some surprises but Montana was the record breaking beneficiary of Huntington Hill:  two seat with a 1.43 quota] Even in this example stakes involve a single seat shifting from New York to Montana. 
-
-Given these preliminary numbers, it's hard to argue that Montana deserves a second House seat, The Constitution created an entire chamber dedicating to protecting an unfair numerical advantage of small states. The Senate bias is bad, and House shouldn't make matters worse.  
+Given the strange rounding process, it's hard to argue that Montana deserves a second House seat, The Constitution created an entire chamber dedicating to protecting an unfair numerical advantage of small states. The Senate bias is bad, and House shouldn't make matters worse.  
 
 
 ### Addendum:  Why does the census website show that we assign individual seats in order from 51 to 435?
@@ -330,17 +328,18 @@ The process works like this:
 
 Look at assignments if the continued past seat 435; we get New York at 436 and Minnesota at 437.  Earlier, we saw those were the two states that lost seats when we simply altered the US population denominator.
 
-When we iterate like this, Alabama wins of the 435th seat, while New York comes in 436th. If Alabama had 6,209 fewer residents it would have traded places with New York and lost its seventh seat. 
-
-So why is Montana (and not Alabama) the relevant comparison in my analysis? *Because Montana gets an enomrous break in the adjustment from the Webster method to Huntington-Hill.*  Alabama, by comparison, winds up with 7 seats using either the Huntington-Hill or Webster method.
+When we iterate like this, Minnesota wins of the 435th seat, while New York comes in 436th. The margin was extremely close, making matters worse, and if Minnesota had 26 fewer residents it would have traded places with New York and lost its eighth seat. 
+So why is Montana (and not Minnesota) the relevant comparison in my analysis? *Because Montana, along with Rhode Island, gets an enomrous break in the adjustment from the Webster method to Huntington-Hill.*  Minnesota, by comparison, winds up with 8 seats using either the Huntington-Hill or Webster method.^[Minnesota's quota in 2020 was 7.501, a hair greater than 7.5, and slightly increased from 2010. Its quota then was 7.478. They still managed to win an 8th seat in 2010.]
 
 Again, this is all based on a recent population estimate generated before the inauguration.  The tables below show the size of population change that would drop a state below seat number 435 or move it up to that position.  If the final apportionment figures show these changes, the results will change.  Montana, Alabama, and New York could all produce drama when the results are announced.  
 
 ```{r}
 five_winners_2020 %>% 
     inner_join(st_codes, by=c("stcd" = "state")) %>% 
-    mutate(seat = 431:435, pct_change_to_lose = population_margin/population*100) %>% 
-select("Seat Number" = seat, State = state_name, "Total Seats" = seat_counter, Population = population, "Loss Drops a Seat" = population_margin, "Pct to Drop Seat" = pct_change_to_lose) %>%    
+    mutate(seat = 431:435, pct_change_to_lose = population_margin/population*100,
+           seat_counter = seat_counter + 1,
+           population_margin = ceiling(population_margin)) %>% 
+          select("Seat Number" = seat, State = state_name, "Total Seats" = seat_counter, Population = population, "Loss Drops a Seat" = population_margin, "Pct to Drop Seat" = pct_change_to_lose) %>%    
   knitr::kable("pipe", format.args = list(big.mark = ",", 
   scientific = FALSE), digits=c(0,0,0,0,0,3))
 
