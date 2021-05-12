@@ -1481,14 +1481,14 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 
 <div class="d-article">
-<p><strong><em>In the 2020 apportionment, New York and Ohio each lost seats, while Montana and Rhode Island received two seats. This result demonstrates a persistent and needless small-state bias in the apportionment rounding process that dates back to the 1940 census.</em></strong></p>
+<p><strong><em>In the 2020 apportionment, New York and Ohio each lost seats, while Montana gained a second seat and Rhode Island retained two seats. This result demonstrates a persistent small-state bias in the apportionment rounding process that dates back to the 1940 census.</em></strong></p>
 <p><strong>The final apportionment changes from 2010 to 2020 are:</strong></p>
-<p><strong>TX: +2</strong></p>
-<p><strong>CO, FL, MT, NC, OR: +1</strong></p>
-<p><strong>CA, IL, MI, NY, OH, PA, WV: -1</strong></p>
+<p><strong>Texas: +2</strong></p>
+<p><strong>Colorado, Florida, Montana, North Carolina, and Oregon: +1</strong></p>
+<p><strong>California, Illinois, Michigan, New York, Ohio, Pennsylvania, and West Virginia: -1</strong></p>
 <p>Once the Census determines the country’s population, apportionment should be simple. Proportionality is the only constitutional requirement, aside from a guarantee of one representative for each state. The Institute for Social Research at the University of Michigan provides an <a href="https://isr.umich.edu/apportionment-calculator-for-us-census/">easy-to-use apportionment calculator</a> based on any population input.</p>
-<p>Virtually all the controversy about apportionment involves the population count. But rounding also introduces additional problems, and rounding formulas can bias the result. This year, Montana could be the beneficiary of a quirk in the rounding process, while New York could be victimized.</p>
-<p>The currently used formula for the US House, known as the Huntington-Hill Method, was enacted in 1941. This formula creates a small but consistent bias for less populous states.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>Virtually all the controversy about apportionment involves the population count. But rounding also introduces additional problems, and rounding formulas can bias the result. This year, Montana and Rhode Island were beneficiaries of a quirk in the rounding process, while New York and Ohio were victimized.</p>
+<p>The rounding formula for the US House, known as the Huntington-Hill Method, was enacted in 1941. This formula creates a small but consistent bias for less populous states.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <h3 id="the-quota-the-starting-point-for-reapportionment">The Quota: the Starting Point for Reapportionment</h3>
 <p>Each state’s seat count is driven by its <em>quota</em>:</p>
 <p><span class="math display">\[
@@ -1502,13 +1502,13 @@ Quota_{state} = \frac{\text{State Population}}{\text{US Population}} \times 435
 <p>Montana’s quota is:</p>
 <p><span class="math display">\[
 \text{Montana Quota}  = \frac{1,085,407}{331,108,434} \times 435 \approx 1.43
-\]</span> How does the apportionment process round these quotas into whole numbers? We presume that New York will round to either 26 or 27, and Montana rounds to 1 or 2 <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
-<p>In the ordinary sense of the word “round”, we draw a line at .5. Any value with a remainder above the lower integer is rounded up, and a remainder below .5 is rounded down. Using this definition, New York rounds up from 26.56 to 27 and Montana rounds down from 1.43 to 1.</p>
-<p>But when we use the current apportionment formula New York gets only 26 seats, while Montana would get 2. How is that possible?</p>
+\]</span> How does the apportionment process round these quotas into whole numbers? We presume that New York will round to either 26 or 27, and Montana rounds to 1 or 2. <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<p>In the ordinary sense of the word “round”, we draw a line at .5. Any value with a remainder above the lower integer is rounded up, and a remainder below .5 is rounded down. Using this definition, New York should round up from 26.56 to 27 and Montana rounds down from 1.43 to 1.</p>
+<p>But under the current apportionment formula New York gets only 26 seats, while Montana would get 2. How is that possible?</p>
 <h3 id="webster-huntington-hill-and-the-method-of-equal-proportions">Webster, Huntington-Hill, and the Method of Equal Proportions</h3>
 <p>The apportionment rounding problem is well documented, full of surprising wrinkles, and inherent in any proportional seat allocation method. Solutions for the rounding problem in the U.S. House date back to the 1790’s, and were associated with statesmen, including Hamilton, Jefferson, John Quincy Adams, and Daniel Webster.</p>
 <p>In the decades before the 1940’s, Congress used a formula designed by Webster based on earlier work by Hamilton.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
-<p>The Webster formula applies our starting intuition that the allocation should round up when the remainder is greater than .5, and round down if the remainder is less. But the formula must also determine how to guarantee the sum of the rounded allocations equals 435.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
+<p>The Webster formula uses the intuition that we should round up when the remainder is greater than .5, and round down if the remainder is less. But the formula must also determine how to guarantee the sum of the rounded allocations equals 435.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
 <p>The fractional remainders are unpredictable and rounding can throw off the sum. To demonstrate, suppose that the US is comprised of three states instead of 50 (and let’s say they are California, Oregon, and Washington). Using the Webster method and the December 2020 estimates, we see this result:</p>
 <div class="layout-chunk" data-layout="l-body">
 <table>
@@ -1555,12 +1555,12 @@ Quota_{state} = \frac{\text{State Population}}{\text{US Population}} \times 435
 </div>
 <p>In this particular case, the rounded whole numbers add to 435, and we are finished.</p>
 <p>But suppose we alter the population figures slightly. If the fractional remainders are distributed differently, the number of seats may add to a number greater or less than 435.</p>
-<p>If we alter the quota formula for some adjustment, we can drive the total to the desired level. Some states will give up a seat while others are left alone.</p>
+<p>To solve this problem, we can alter the quota formula by increasing the US Population denominator. Some states will give up a seat while others are left alone.</p>
 <p><span class="math display">\[
 \text{Adjusted Quota}_{state} = \frac{\text{State Population}}{\text{US Population + Adjustment}} \times 435
 \]</span></p>
-<p>In the example below, the initial quotas generate a seat total of 436. By gradually increasing the denominator (adding to the total population), one state’s fractional remainder will eventually drop below .5.<br />
-When the denominator in the quota formula is increased by 26,780, California’s quota drops a hair below 334.5. Washington’s quota and Oregon’s quota drop too, but their fractional remainders don’t cross the .5 threshold.</p>
+<p>In the example below, the initial quotas generate a seat total of 436. By gradually increasing the denominator (adding to the total population), one state’s fractional remainder will eventually drop below .5.</p>
+<p>When the denominator in the quota formula is increased by 26,780, California’s quota drops a hair below 334.5. Washington’s quota and Oregon’s quota drop too, but their fractional remainders don’t drop below the .5 threshold.</p>
 <div class="layout-chunk" data-layout="l-body">
 <table>
 <colgroup>
@@ -1633,47 +1633,45 @@ When the denominator in the quota formula is increased by 26,780, California’s
 <p>In 1880, we saw that Alabama would lose seats as a direct result of hypothetically increasing the total number of House seats, a result famously known as the Alabama Paradox. A related problem known as the Population Paradox was observed in 1902 when using the Hamilton formula (which is similar to the Webster formula), Virginia would have lost seats to Maine even though Virginia’s population increased by a greater percentage. <a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></p>
 <p>In order to prevent these scenarios, Congress replaced the Webster method in 1941 by a design by statistician Joseph Hill and adapted by Harvard mathematician Edward Huntington.</p>
 <p>The Huntington-Hill formula ignores the .5 rounding threshold and instead uses the geometric mean of the two whole numbers closest to the state’s quota. The geometric mean of two consecutive integers is the square root of their product, and the rounding threshold ranges between .414 and .5.</p>
-<p>If the quota exceeds the geometric mean, we round up, and if not, we round down.</p>
-<p>Small states have much smaller geometric means, compared to large states.</p>
+<p>If a state’s quota exceeds the geometric mean, we round up, and if not, we round down. But we can run into the same problem in the three state example: the sum might not add up to 435.</p>
+<p>Small states have much smaller geometric means, compared to large states. Therefore we are more likely to round up small states than larger ones.</p>
 <h3 id="example-a-state-with-a-quota-of-3.48">Example: A state with a quota of 3.48</h3>
 <p>We might think of the .5 threshold determined by the arithmetic mean between the two whole numbers surrounding a quota; if a state’s quota is 3.48, the two surrounding whole numbers are 3 and 4.</p>
 <p>The arithmetic mean of 3 and 4 is 3.5. The geometric mean of 3 and 4 is approximately 3.46. Again, the Webster method uses the arithmetic mean and Huntington-Hill uses the geometric mean.<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a></p>
-<p><span class="math display">\[
-\text{For two consecutive whole numbers, the arithmetic mean of n and n+1 =} 
-(2n + 1)/2
+<p>For two consecutive whole numbers, <strong>the arithmetic mean of n and n+1 =</strong> <span class="math display">\[
+\frac{2n + 1}{2}
 \]</span> The fractional remainder of the arithmetic mean is always .5.</p>
 <p><strong>Since the quota of 3.48 falls below 3.5, the Webster method would round down to 3 seats.</strong></p>
 <p>The geometric mean of two consecutive integers is the square root of their product, and the remainder ranges between .414 and .5.</p>
-<p><span class="math display">\[
-\text{For two consecutive whole numbers, the geometric mean =} 
+<p>For two consecutive whole numbers, <strong>the geometric mean of n and n+1 =</strong> <span class="math display">\[
 \sqrt{n\times(n+1))}
 \]</span> The geometric mean of 3 and 4 is</p>
 <p><span class="math display">\[
-\sqrt{3\times(4))} = \sqrt{12} \approx 3.464
+\sqrt{3\times4} = \sqrt{12} \approx 3.464
 \]</span></p>
 <p><strong>Since the quota of 3.48 in the example is greater than 3.464, the Huntington-Hill method rounds <em>up</em> to 4 seats.</strong></p>
-<p>The Huntington-Hill method reduces the likelihood of the Alabama Paradox and the Population Paradox, even though the difference between the arithmetic vs. geometric means goes away as the number of seats increases and the geometric mean approaches <span class="math inline">\((n + .5)\)</span> But the difference between arithmetic vs. geometric means for states with smaller numbers of seats can be significant.</p>
+<p>The Huntington-Hill method reduces the likelihood of the Alabama Paradox and the Population Paradox, even though the difference between the arithmetic vs. geometric means goes away as the number of seats increases and the geometric mean approaches <span class="math inline">\((n + .5)\)</span> But the difference between arithmetic vs. geometric means for states with smaller numbers of seats can be significant. In the figure below, the shaded region represents the gap.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="figure"><span id="fig:unnamed-chunk-3"></span>
-<img src="Apportion_2020_v1_files/figure-html5/unnamed-chunk-3-1.png" alt="Rounding thresholds for Webster and Huntington-Hill methods.  Quotas with fractional remainders in the shaded region are rounded *down* for Webster and *up* for Huntington-Hill, the method currently in use. The red dot places our example of a 3.48 quota.  The extra shaded region on the left shows the small-state bias in  Huntington-Hill" width="624" />
+<img src="Apportion_2020_v1_files/figure-html5/unnamed-chunk-3-1.png" alt="Rounding thresholds for Webster and Huntington-Hill methods.  Quotas with fractional remainders in the shaded region are rounded *down* for Webster and *up* for Huntington-Hill, the method currently in use. The red dot places our example of a 3.48 quota.  The shaded region on the left shows the small-state bias in  Huntington-Hill." width="624" />
 <p class="caption">
-Figure 1: Rounding thresholds for Webster and Huntington-Hill methods. Quotas with fractional remainders in the shaded region are rounded <em>down</em> for Webster and <em>up</em> for Huntington-Hill, the method currently in use. The red dot places our example of a 3.48 quota. The extra shaded region on the left shows the small-state bias in Huntington-Hill
+Figure 1: Rounding thresholds for Webster and Huntington-Hill methods. Quotas with fractional remainders in the shaded region are rounded <em>down</em> for Webster and <em>up</em> for Huntington-Hill, the method currently in use. The red dot places our example of a 3.48 quota. The shaded region on the left shows the small-state bias in Huntington-Hill.
 </p>
 </div>
 </div>
 <p>The shaded area shows the region where a quota would produce different rounding results depending on the method chosen. Under today’s Huntington-Hill method, the threshold is the curved line. The likelihood of rounding up increases as the state’s relative population shrinks.</p>
-<p>Neither formula guarantees an allocation of 435 seats on the first pass. For example, in the case of the December 2020 estimate, the Huntington-Hill formula described below generates a sum of 437 representatives on before any adjustments.</p>
-<p>Huntington-Hill reduces the total seat count in the same way we saw in the three-state example: gradually increasing the denominator used to determine states’ quotas. Eventually, some states above the rounding threshold will fall below it. Thus, two states will lose a representative, which gets us to 435.</p>
-<p>The two states that lose seats after this adjustment are Ohio and New York.</p>
-<p>Increasing the US population denominator by 794,110 reduces the seat total from 437 to 435, and Ohio and New York are close enough to their respective geometric means that they lost a seat they would have received from simple rounding.</p>
-<p>Several smaller states with quotas had smaller fractional remainders than New York and Ohio, but their allocations based on simple rounding were unscathed. Montana won a second seat despite its small 1.43 quota, and Idaho nearly won a third seat even with a quota of 2.42. The reason is that rounding up is easier for small states in a formula based on the geometric mean.</p>
-<p>By contrast, the Webster method gets it right on the first try with 435. That method assigns Montana and Rhode Island only 1 seat each, while New York gets 26 and Ohio gets 16. Sometimes both of these formulas gets to 435 without any adjustment, and sometimes they don’t.</p>
-<p>The version of the Huntington-Hill formula documented by the U.S. Census (and described at the Census press conference) adapts this logic in a clever way. We generate a sequence that assigns seats by number, going all the way to 435. The result is identical to the process I described, and explained more completely in an addendum below.<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a></p>
+<p>Neither the Webster nor the Huntington-Hill formula guarantees an allocation of 435 seats on the first pass. For 2020, the initial Huntington-Hill rounding produced a sum of 437 representatives before any adjustments.</p>
+<p>To fix the problem, Huntington-Hill reduces the total seat count in the same way we saw in the three-state example: gradually increasing the US population denominator used to determine states’ quotas. Eventually, some states above the rounding threshold will drop below it. Thus, two states will lose a representative, which gets us to 435.</p>
+<p>The two states that lost seats after this adjustment are Ohio and New York.</p>
+<p>Increasing the US population denominator by 794,110 reduces the seat total from 437 to 435, and the quotas for Ohio and New York were close enough to their respective geometric means that they lost a seat they would have otherwise received from simple rounding.</p>
+<p>Several smaller state had quotas with smaller fractional remainders than New York and Ohio, but their allocations based on simple rounding were unscathed. Montana won a second seat despite its small 1.43 quota, and Idaho nearly won a third seat even with a quota of 2.42. <strong>Rounding up is more likely for small states in a formula based on the geometric mean.</strong></p>
+<p>The Webster method gets 2020 right on the first try with a sum of 435. That method assigns Montana and Rhode Island only 1 seat each, while New York gets 26 and Ohio gets 16. Sometimes both of these formulas gets to 435 without any adjustment, and sometimes they don’t.</p>
+<p>The version of the Huntington-Hill formula documented by the U.S. Census (and described at the Census press conference) adapts this logic in a clever way. That version, named the <em>Method of Equal Proportions</em>, generates a sequence that assigns seats by number after one seat is allocated to all 50 states, from 51 to 435. The result is identical to the rounding and adjusting process I described, and explained more completely in an addendum below.<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a></p>
 <h3 id="since-huntington-hill-was-adopted-how-many-states-have-been-penalized-as-much-as-new-york-and-ohio-in-the-2020-apportionment">Since Huntington-Hill was adopted, how many states have been penalized as much as New York and Ohio in the 2020 apportionment?</h3>
-<p>Starting with 1940, 10 censuses through 2020 have produced 446 individual state apportionments under Huntington-Hill. Only 17 of these 446 allocations rounded down a state’s apportionment with an initial quota residual greater of than .5.</p>
+<p>Starting with 1940, nine censuses through 2020 have produced 446 individual state apportionments under Huntington-Hill. Only 17 of these 446 allocations rounded down a state’s apportionment with an initial quota fractional remainder greater of than .5.</p>
 <p>As the table shows, the largest residual (i.e., the state losing a seat with the biggest rounding error) was California in the 1950 census, with an extremely large fractional remainder of .722.</p>
-<p>New York produced the sixth greatest seat loss, relative to its residual, since 1940.</p>
-<p>Notice that 12 of these 16 unlucky seat allocations had came from states with seat counts of 10 or more.</p>
+<p>This year, New York produced the sixth greatest difference between its quota and seats since 1940.</p>
+<p>Notice that 13 of these 17 unlucky seat allocations had came from states with seat counts of 10 or more.</p>
 <div class="layout-chunk" data-layout="l-body">
 <table>
 <thead>
@@ -1682,7 +1680,7 @@ Figure 1: Rounding thresholds for Webster and Huntington-Hill methods. Quotas wi
 <th style="text-align: left;">Year</th>
 <th style="text-align: right;">Seats</th>
 <th style="text-align: right;">Quota</th>
-<th style="text-align: right;">Frac_Remainder</th>
+<th style="text-align: right;">Quota_minus_seats</th>
 </tr>
 </thead>
 <tbody>
@@ -1817,7 +1815,7 @@ Figure 1: Rounding thresholds for Webster and Huntington-Hill methods. Quotas wi
 <th style="text-align: left;">Year</th>
 <th style="text-align: right;">Seats</th>
 <th style="text-align: right;">Quota</th>
-<th style="text-align: right;">Frac_remainder</th>
+<th style="text-align: right;">seats_minus_quota</th>
 </tr>
 </thead>
 <tbody>
@@ -1917,11 +1915,10 @@ Figure 2: State quotas vs. fractional remainder of seat allocations. Positive s
 </div>
 </div>
 <p>Notice that the constitutional guarantee of one seat has rarely assigned to seat to a state with a tiny quota.<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a></p>
-<p>The second most generous seat allocation will be 2020 if the population figures hold: Montana, winning a second seat despite a small residual of .43. Both New York’s smaller apportionment and Montana’s larger one would be historic.</p>
-<h3 id="how-many-states-have-been-rewarded-with-a-bonus-as-big-as-montanas-or-rhode-islands">How many states have been rewarded with a bonus as big as Montana’s or Rhode Island’s?</h3>
-<p>Montana made history for the lowest quota that yields an extra seat from Huntington-Hill. Montana is always on the bubble between one and two seats and its Supreme Court challenge after the 1990 apportionment reflects that. But a quota below 1.5, such as Montana in 2020, rarely produces two seats.</p>
-<p>How many times has Huntington-Hill formula differed from the result generated by Webster?</p>
-<p>Ten times since 1940, one state received an extra seat thanks to Huntington-Hill while another state lost one. Usually, we see one instance per census. Each time, a seat shifts from a bigger state to a much smaller one.</p>
+<p><strong>Montana set a record in 2020 with the most generous rounding boost since Huntington-Hill was adopted.</strong></p>
+<p>In every recent census, Montana lives on the bubble between one and two seats. But a quota below 1.5, such as Montana and Rhode Island in 2020, rarely produces two seats.</p>
+<h3 id="how-many-times-has-huntington-hill-formula-differed-from-the-result-generated-by-webster">How many times has Huntington-Hill formula differed from the result generated by Webster?</h3>
+<p>Webster would have produced a different apportionment result 10 times since 1940. Usually, we see one instance per census, but in 2020 there were two. <strong>Montana and Rhode Island won seats that Webster would have given to New York and Ohio.</strong> In all 10 instances, a seat shifts from a bigger state to a much smaller one.</p>
 <div class="layout-chunk" data-layout="l-body">
 <table>
 <thead>
@@ -2100,9 +2097,8 @@ Figure 3: Instances since 1940 when Huntington-Hill and Webster assign different
 </p>
 </div>
 </div>
-<p>Twenty of the 446 apportions show a different result between Huntington-Hill vs. Webster from 1940-2020. The states rewarded by Huntington-Hill are all smaller than the states punished by it.</p>
 <p>Ironically, Montana contested the 1990 apportionment in court, arguing that the Huntington-Hill method unfairly denied them a second seat in 1990. Montana claimed the process should be based instead on the never-used “Dean” method.<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a> The case <em>Department of Commerce v. Montana</em> went to the Supreme Court, which decided in favor of the Huntington-Hill allocation in the 1990 census.<a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a></p>
-<p>Montana became a significant beneficiary of Huntington-Hill in 2020, a development they did not forsee in the 1990’s.</p>
+<p>Despite this challenge, Montana became a significant beneficiary of Huntington-Hill in 2020, a development they did not forsee in the 1990’s.</p>
 <p>Given the strange rounding process, it’s hard to argue that Montana deserves a second House seat, The Constitution created an entire chamber dedicating to protecting an unfair numerical advantage of small states. The Senate bias is bad, and House shouldn’t make matters worse.</p>
 <h3 id="addendum-why-does-the-census-website-show-that-we-assign-individual-seats-in-order-from-51-to-435">Addendum: Why does the census website show that we assign individual seats in order from 51 to 435?</h3>
 <p>A clever way to regenerate the Huntington Hill method is described on the census, described as the method of equal proportions, and detailed here: <a href="https://www.census.gov/prod/cen2010/briefs/c2010br-08.pdf" class="uri">https://www.census.gov/prod/cen2010/briefs/c2010br-08.pdf</a></p>
@@ -2111,21 +2107,21 @@ Figure 3: Instances since 1940 when Huntington-Hill and Webster assign different
 <li><p>Assign one seat to every one of the states.</p></li>
 <li><p>Assign the remaining 385 seats (i.e., seats numbered 51 through 435) as follows:</p>
 <ol type="a">
-<li><p>Compute an initial “priority score” that takes the population divided by the geometric mean of 1 and 2.</p></li>
-<li><p>Every state’s initial priority score is its population / sqrt (1*2), which is its population / ~ 1.41.</p></li>
-<li><p>Identify the state with the highest priority score and assign the 51st seat to that state. Because every priority score is the same at this point, the 51st seat goes to the state with the greatest population.</p></li>
+<li><p>Compute an initial “priority score” for each state, taking its population divided by the geometric mean of 1 and 2.</p></li>
+<li><p>Specifically, each state’s initial priority score is equal to its population divided by <span class="math inline">\(\sqrt{1\times 2}\)</span>, which equals its population divided by roughly 1.41.</p></li>
+<li><p>Identify the state with the highest priority score and assign the 51st seat to that state. Because every denominator in the priority score calculation is the same at this point, the 51st seat goes to the state with the greatest population.</p></li>
 </ol>
 <p>The 51st seats thus goes to California.</p>
 <ol start="4" type="a">
-<li><p>Reduce that state’s priority score by calculating its population divided by the geometric mean of n and n+1, where n is the new, higher number of the state’s seats</p></li>
-<li><p>For the state with the 51st seat, we now use the geometric mean 2 and 3, which is sqrt(2*3) or sqrt(6), 2.449. Its priority score goes down accordingly.</p></li>
-<li><p>Reorder the priority scores. The 52nd seat goes to the state with the newly determined high priority score. In all likelihood, the next seat goes to a different state that now has 2 seats. This year, the 52nd seat goes to Texas. Just like California, its priority score is recomputed to a lower value.</p></li>
+<li><p>Reduce that state’s priority score by calculating its population divided by the geometric mean of 2 and 3. We adjust this way because 2 is the state’s new, larger number of seats.</p></li>
+<li><p>Since California won the 51st seat and now has 2, divide its population by <span class="math inline">\(\sqrt{2\times 3}\)</span> or <span class="math inline">\(\sqrt{6} = 2.449\)</span>. Its priority score goes down accordingly. This reduction is enough to drop California out of first place.</p></li>
+<li><p>Reorder the priority scores. The 52nd seat goes to the state with the newly determined highest priority score. This year, the 52nd seat goes to Texas. Just like California before it, Texas’s priority score is recomputed to a lower value.</p></li>
 <li><p>Repeat steps e and f until all 435 seats have been allocated. In each iteration, the priority score is recalculated and reduced, and the state awarded a given seats (probably) moves somewhere further back in the line.</p></li>
 </ol></li>
 </ol>
-<p>Look at assignments if the continued past seat 435; we get New York at 436 and Minnesota at 437. Earlier, we saw those were the two states that lost seats when we simply altered the US population denominator.</p>
-<p>When we iterate like this, Minnesota wins of the 435th seat, while New York comes in 436th. The margin was extremely close, making matters worse, and if Minnesota had 26 fewer residents it would have traded places with New York and lost its eighth seat. So why is Montana (and not Minnesota) the relevant comparison in my analysis? <em>Because Montana, along with Rhode Island, gets an enomrous break in the adjustment from the Webster method to Huntington-Hill.</em> Minnesota, by comparison, winds up with 8 seats using either the Huntington-Hill or Webster method.<a href="#fn12" class="footnote-ref" id="fnref12" role="doc-noteref"><sup>12</sup></a></p>
-<p>Again, this is all based on a recent population estimate generated before the inauguration. The tables below show the size of population change that would drop a state below seat number 435 or move it up to that position. If the final apportionment figures show these changes, the results will change. Montana, Alabama, and New York could all produce drama when the results are announced.</p>
+<p>Look at assignments if the continued past seat 435; we get New York at 436 and Ohio at 437. Earlier, we saw those were the two states that lost seats when we simply altered the US population denominator.</p>
+<p>When we iterate like this, Minnesota wins of the 435th seat, while New York comes in 436th. The margin was historically close, and if Minnesota had 26 fewer residents it would have traded places with New York and lost its eighth seat.</p>
+<p>So why is Montana (and not Minnesota) the relevant comparison in this critique? <strong>Because Montana, along with Rhode Island, gets an enomrous break in the adjustment from the Webster method to Huntington-Hill.</strong> Minnesota, with a quota of 7.501, winds up with 8 seats using either the Huntington-Hill or Webster method.<a href="#fn12" class="footnote-ref" id="fnref12" role="doc-noteref"><sup>12</sup></a></p>
 <div class="layout-chunk" data-layout="l-body">
 <table>
 <thead>
@@ -2251,7 +2247,7 @@ Figure 3: Instances since 1940 when Huntington-Hill and Webster assign different
 <li id="fn9" role="doc-endnote"><p>The geometric mean of 0 and 1 equals 1, and in any event, and in any event, Nevada in 1940 and 1950 are the only cases since 1940 where the quota fell below 0.5<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn10" role="doc-endnote"><p><a href="https://www.maa.org/press/periodicals/convergence/apportioning-representatives-in-the-united-states-congress-deans-method-of-apportionment" class="uri">https://www.maa.org/press/periodicals/convergence/apportioning-representatives-in-the-united-states-congress-deans-method-of-apportionment</a><a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn11" role="doc-endnote"><p><a href="https://www.law.cornell.edu/supct/html/91-860.ZS.html" class="uri">https://www.law.cornell.edu/supct/html/91-860.ZS.html</a><a href="#fnref11" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn12" role="doc-endnote"><p>Minnesota’s quota in 2020 was 7.501, a hair greater than 7.5, and slightly increased from 2010. Its quota then was 7.478. They still managed to win an 8th seat in 2010.<a href="#fnref12" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn12" role="doc-endnote"><p>Minnesota’s quota in 2020 was 7.501, a hair greater than 7.5, and slightly increased from 2010. Its quota then was 7.478. It still managed to win an 8th seat in 2010.<a href="#fnref12" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 <!--radix_placeholder_article_footer-->
