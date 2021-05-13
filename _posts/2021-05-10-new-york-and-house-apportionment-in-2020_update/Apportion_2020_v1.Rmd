@@ -249,7 +249,7 @@ hunt_hill_sequence_result %>%
 
 ```
 
-Notice that the constitutional guarantee of one seat has rarely assigned to seat to a state with a tiny quota.^[The geometric mean of 0 and 1 equals 1, and in any event, and in any event, Nevada in 1940 and 1950 are the only cases since 1940 where the quota fell below 0.5]
+Notice that the constitutional guarantee of one seat has rarely assigned to seat to a state with a tiny quota.^[The geometric mean of 0 and 1 equals 0, which means a state with a tiny population will still round up to one using Huntington-Hill. In any event, Nevada in 1940 and 1950 are the only cases since 1940 where the quota fell below 0.5]
 
 **Montana set a record in 2020 with the most generous rounding boost since Huntington-Hill was adopted.** 
 
