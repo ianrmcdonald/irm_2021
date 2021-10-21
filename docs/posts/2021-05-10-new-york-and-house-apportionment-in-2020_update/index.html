@@ -23,6 +23,7 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
@@ -55,7 +56,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { color: #20794d; } /* Attribute */
+code span.at { } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
 code span.cf { color: #007ba5; } /* ControlFlow */
@@ -76,13 +77,14 @@ code span.kw { color: #007ba5; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
 code span.ot { color: #007ba5; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
-code span.sc { color: #20794d; } /* SpecialChar */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
 code span.st { color: #20794d; } /* String */
 code span.va { color: #111111; } /* Variable */
 code span.vs { color: #20794d; } /* VerbatimString */
 code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
+
 
   <!--radix_placeholder_meta_tags-->
 <title>Ian R. McDonald Ph.D. Website: Rounding Errors and the 2020 Apportionment</title>
@@ -135,7 +137,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["Apportion_2020_v1_files/anchor-4.2.2/anchor.min.js","Apportion_2020_v1_files/bowser-1.9.3/bowser.min.js","Apportion_2020_v1_files/distill-2.2.21/template.v2.js","Apportion_2020_v1_files/figure-html5/unnamed-chunk-3-1.png","Apportion_2020_v1_files/figure-html5/unnamed-chunk-6-1.png","Apportion_2020_v1_files/figure-html5/unnamed-chunk-9-1.png","Apportion_2020_v1_files/header-attrs-2.6/header-attrs.js","Apportion_2020_v1_files/jquery-1.11.3/jquery.min.js","Apportion_2020_v1_files/popper-2.6.0/popper.min.js","Apportion_2020_v1_files/tippy-6.2.7/tippy-bundle.umd.min.js","Apportion_2020_v1_files/tippy-6.2.7/tippy-light-border.css","Apportion_2020_v1_files/tippy-6.2.7/tippy.css","Apportion_2020_v1_files/tippy-6.2.7/tippy.umd.min.js","Apportion_2020_v1_files/webcomponents-2.0.0/webcomponents.js","data/~$hist_pop_revised.xlsx","data/c1940.csv","data/c2010br-08.pdf","data/census backup/2010 Census Apportionment Results_files/1","data/census backup/2010 Census Apportionment Results_files/8DCFX-TQ8VD-TWDGB-7ETWJ-HY5CJ","data/census backup/2010 Census Apportionment Results_files/analytics.js","data/census backup/2010 Census Apportionment Results_files/analytics(1).js","data/census backup/2010 Census Apportionment Results_files/AppMeasurement_Module_ActivityMap.min.js","data/census backup/2010 Census Apportionment Results_files/AppMeasurement.min.js","data/census backup/2010 Census Apportionment Results_files/bootstrap.css","data/census backup/2010 Census Apportionment Results_files/bootstrap.js","data/census backup/2010 Census Apportionment Results_files/census-css.css","data/census backup/2010 Census Apportionment Results_files/census-fonts.css","data/census backup/2010 Census Apportionment Results_files/census-js.js","data/census backup/2010 Census Apportionment Results_files/census-pattern-library.css","data/census backup/2010 Census Apportionment Results_files/clientlibs.css","data/census backup/2010 Census Apportionment Results_files/clientlibs.js","data/census backup/2010 Census Apportionment Results_files/clientlibs(1).js","data/census backup/2010 Census Apportionment Results_files/clientlibs(2).js","data/census backup/2010 Census Apportionment Results_files/common-site.css","data/census backup/2010 Census Apportionment Results_files/common-site.js","data/census backup/2010 Census Apportionment Results_files/component.js","data/census backup/2010 Census Apportionment Results_files/component(1).js","data/census backup/2010 Census Apportionment Results_files/component(2).js","data/census backup/2010 Census Apportionment Results_files/component(3).js","data/census backup/2010 Census Apportionment Results_files/component(4).js","data/census backup/2010 Census Apportionment Results_files/component(5).js","data/census backup/2010 Census Apportionment Results_files/component(6).js","data/census backup/2010 Census Apportionment Results_files/core-overrides.css","data/census backup/2010 Census Apportionment Results_files/external-link.svg","data/census backup/2010 Census Apportionment Results_files/fbevents.js","data/census backup/2010 Census Apportionment Results_files/granite.js","data/census backup/2010 Census Apportionment Results_files/icon-tables.png","data/census backup/2010 Census Apportionment Results_files/icon-tables(1).png","data/census backup/2010 Census Apportionment Results_files/icon-tables(2).png","data/census backup/2010 Census Apportionment Results_files/jquery-1.4.2.min.js","data/census backup/2010 Census Apportionment Results_files/jquery.css","data/census backup/2010 Census Apportionment Results_files/jquery.js","data/census backup/2010 Census Apportionment Results_files/jquery(1).js","data/census backup/2010 Census Apportionment Results_files/jsapi","data/census backup/2010 Census Apportionment Results_files/launch-ENdc1ca6bab15e46a5b880a2c3f9d462ab.min.js","data/census backup/2010 Census Apportionment Results_files/modern.js","data/census backup/2010 Census Apportionment Results_files/modernizr.js","data/census backup/2010 Census Apportionment Results_files/orionicons.css","data/census backup/2010 Census Apportionment Results_files/pdf.svg","data/census backup/2010 Census Apportionment Results_files/print.css","data/census backup/2010 Census Apportionment Results_files/ratingtool.css","data/census backup/2010 Census Apportionment Results_files/ratingtool.js","data/census backup/2010 Census Apportionment Results_files/RCf578b991dc4240cd85475171726bd899-source.min.js","data/census backup/2010 Census Apportionment Results_files/saved_resource.html","data/census backup/2010 Census Apportionment Results_files/teaser.js","data/census backup/2010 Census Apportionment Results_files/thumbsdown.png","data/census backup/2010 Census Apportionment Results_files/thumbsup.png","data/census backup/2010 Census Apportionment Results_files/Universal-Federated-Analytics-Min.js","data/census backup/2010 Census Apportionment Results_files/universalheader.js","data/census backup/2010 Census Apportionment Results_files/USCENSUS_IDENTITY_SOLO_White_2in_TM.svg","data/census backup/2010 Census Apportionment Results_files/utils.js","data/census backup/2010 Census Apportionment Results_files/xls.svg","data/census backup/2010 Census Apportionment Results.htm","data/census backup/Apportionment Legislation 1890 - Present - History - U.S. Census Bureau.html","data/census backup/ApportionmentPopulation2010.xls","data/census backup/c1940.pdf","data/census backup/c1950.pdf","data/census backup/c1960.pdf","data/census backup/c1970.pdf","data/census backup/c1980.pdf","data/census backup/c1990.pdf","data/census backup/transmittal package 2000.xls","data/check.xlsx","data/eds population data/apportionment1_1940Pop.pdf","data/eds population data/apportionment1_1950Pop.pdf","data/eds population data/apportionment1_1960Pop.pdf","data/eds population data/apportionment1_1970Pop.pdf","data/eds population data/apportionment1_1980PopFixed.pdf","data/eds population data/apportionment1_1990Pop.pdf","data/eds population data/apportionment1_2000Pop.pdf","data/eds population data/apportionment1_5_Official2010PressPackage-2.pdf","data/eds population data/apportionment1_5_Official2010PressPackage.pdf","data/eds population data/CD-apportionment-1789-2010.pdf","data/hist_apportion.xlsx","data/hist_pop_revised.csv","data/hist_pop_revised.xlsx","data/hist_pop.csv","data/hist_pop.xlsx","data/nst-est2020_revised.xlsx","data/nst-est2020.xls","data/nst-est2020.xlsx","data/pop2019.csv","data/popest_2020_12_22.csv","data/state_names.csv","data/state_names.xlsx","data/tabula-c2010br-08.csv","data/tweak_denominator.xlsx","images/seats_minus_quota.png","tables/main.xlsx","tables/table_1.csv","tables/table_2.csv"]}
+  {"type":"character","attributes":{},"value":["Apportion_2020_v1_files/anchor-4.2.2/anchor.min.js","Apportion_2020_v1_files/bowser-1.9.3/bowser.min.js","Apportion_2020_v1_files/distill-2.2.21/template.v2.js","Apportion_2020_v1_files/figure-html5/unnamed-chunk-3-1.png","Apportion_2020_v1_files/figure-html5/unnamed-chunk-6-1.png","Apportion_2020_v1_files/figure-html5/unnamed-chunk-9-1.png","Apportion_2020_v1_files/header-attrs-2.6/header-attrs.js","Apportion_2020_v1_files/jquery-1.11.3/jquery.min.js","Apportion_2020_v1_files/popper-2.6.0/popper.min.js","Apportion_2020_v1_files/tippy-6.2.7/tippy-bundle.umd.min.js","Apportion_2020_v1_files/tippy-6.2.7/tippy-light-border.css","Apportion_2020_v1_files/tippy-6.2.7/tippy.css","Apportion_2020_v1_files/tippy-6.2.7/tippy.umd.min.js","Apportion_2020_v1_files/webcomponents-2.0.0/webcomponents.js","data/c1940.csv","data/c2010br-08.pdf","data/census backup/2010 Census Apportionment Results_files/1","data/census backup/2010 Census Apportionment Results_files/8DCFX-TQ8VD-TWDGB-7ETWJ-HY5CJ","data/census backup/2010 Census Apportionment Results_files/analytics.js","data/census backup/2010 Census Apportionment Results_files/analytics(1).js","data/census backup/2010 Census Apportionment Results_files/AppMeasurement_Module_ActivityMap.min.js","data/census backup/2010 Census Apportionment Results_files/AppMeasurement.min.js","data/census backup/2010 Census Apportionment Results_files/bootstrap.css","data/census backup/2010 Census Apportionment Results_files/bootstrap.js","data/census backup/2010 Census Apportionment Results_files/census-css.css","data/census backup/2010 Census Apportionment Results_files/census-fonts.css","data/census backup/2010 Census Apportionment Results_files/census-js.js","data/census backup/2010 Census Apportionment Results_files/census-pattern-library.css","data/census backup/2010 Census Apportionment Results_files/clientlibs.css","data/census backup/2010 Census Apportionment Results_files/clientlibs.js","data/census backup/2010 Census Apportionment Results_files/clientlibs(1).js","data/census backup/2010 Census Apportionment Results_files/clientlibs(2).js","data/census backup/2010 Census Apportionment Results_files/common-site.css","data/census backup/2010 Census Apportionment Results_files/common-site.js","data/census backup/2010 Census Apportionment Results_files/component.js","data/census backup/2010 Census Apportionment Results_files/component(1).js","data/census backup/2010 Census Apportionment Results_files/component(2).js","data/census backup/2010 Census Apportionment Results_files/component(3).js","data/census backup/2010 Census Apportionment Results_files/component(4).js","data/census backup/2010 Census Apportionment Results_files/component(5).js","data/census backup/2010 Census Apportionment Results_files/component(6).js","data/census backup/2010 Census Apportionment Results_files/core-overrides.css","data/census backup/2010 Census Apportionment Results_files/external-link.svg","data/census backup/2010 Census Apportionment Results_files/fbevents.js","data/census backup/2010 Census Apportionment Results_files/granite.js","data/census backup/2010 Census Apportionment Results_files/icon-tables.png","data/census backup/2010 Census Apportionment Results_files/icon-tables(1).png","data/census backup/2010 Census Apportionment Results_files/icon-tables(2).png","data/census backup/2010 Census Apportionment Results_files/jquery-1.4.2.min.js","data/census backup/2010 Census Apportionment Results_files/jquery.css","data/census backup/2010 Census Apportionment Results_files/jquery.js","data/census backup/2010 Census Apportionment Results_files/jquery(1).js","data/census backup/2010 Census Apportionment Results_files/jsapi","data/census backup/2010 Census Apportionment Results_files/launch-ENdc1ca6bab15e46a5b880a2c3f9d462ab.min.js","data/census backup/2010 Census Apportionment Results_files/modern.js","data/census backup/2010 Census Apportionment Results_files/modernizr.js","data/census backup/2010 Census Apportionment Results_files/orionicons.css","data/census backup/2010 Census Apportionment Results_files/pdf.svg","data/census backup/2010 Census Apportionment Results_files/print.css","data/census backup/2010 Census Apportionment Results_files/ratingtool.css","data/census backup/2010 Census Apportionment Results_files/ratingtool.js","data/census backup/2010 Census Apportionment Results_files/RCf578b991dc4240cd85475171726bd899-source.min.js","data/census backup/2010 Census Apportionment Results_files/saved_resource.html","data/census backup/2010 Census Apportionment Results_files/teaser.js","data/census backup/2010 Census Apportionment Results_files/thumbsdown.png","data/census backup/2010 Census Apportionment Results_files/thumbsup.png","data/census backup/2010 Census Apportionment Results_files/Universal-Federated-Analytics-Min.js","data/census backup/2010 Census Apportionment Results_files/universalheader.js","data/census backup/2010 Census Apportionment Results_files/USCENSUS_IDENTITY_SOLO_White_2in_TM.svg","data/census backup/2010 Census Apportionment Results_files/utils.js","data/census backup/2010 Census Apportionment Results_files/xls.svg","data/census backup/2010 Census Apportionment Results.htm","data/census backup/Apportionment Legislation 1890 - Present - History - U.S. Census Bureau.html","data/census backup/ApportionmentPopulation2010.xls","data/census backup/c1940.pdf","data/census backup/c1950.pdf","data/census backup/c1960.pdf","data/census backup/c1970.pdf","data/census backup/c1980.pdf","data/census backup/c1990.pdf","data/census backup/transmittal package 2000.xls","data/check.xlsx","data/eds population data/apportionment1_1940Pop.pdf","data/eds population data/apportionment1_1950Pop.pdf","data/eds population data/apportionment1_1960Pop.pdf","data/eds population data/apportionment1_1970Pop.pdf","data/eds population data/apportionment1_1980PopFixed.pdf","data/eds population data/apportionment1_1990Pop.pdf","data/eds population data/apportionment1_2000Pop.pdf","data/eds population data/apportionment1_5_Official2010PressPackage-2.pdf","data/eds population data/apportionment1_5_Official2010PressPackage.pdf","data/eds population data/CD-apportionment-1789-2010.pdf","data/hist_apportion.xlsx","data/hist_pop_revised.csv","data/hist_pop_revised.xlsx","data/hist_pop.csv","data/hist_pop.xlsx","data/nst-est2020_revised.xlsx","data/nst-est2020.xls","data/nst-est2020.xlsx","data/pop2019.csv","data/popest_2020_12_22.csv","data/state_names.csv","data/state_names.xlsx","data/tabula-c2010br-08.csv","data/tweak_denominator.xlsx","images/seats_minus_quota.png","tables/main.xlsx","tables/table_1.csv","tables/table_2.csv"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -481,7 +483,7 @@ d-title {
 
 </style>
 
-<script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <link href="../../site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
 <link href="../../site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
 <script src="../../site_libs/headroom-0.9.4/headroom.min.js"></script>
@@ -1888,7 +1890,10 @@ function init_distill() {
 
     // hoverable references
     $('span.citation[data-cites]').each(function() {
-      var refHtml = $('#ref-' + $(this).attr('data-cites')).html();
+      var refs = $(this).attr('data-cites').split(" ");
+      var refHtml = refs.map(function(ref) {
+        return "<p>" + $('#ref-' + ref).html() + "</p>";
+      }).join("\n");
       window.tippy(this, {
         allowHTML: true,
         content: refHtml,
@@ -2059,8 +2064,8 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/header-attrs-2.6/header-attrs.js"></script>
-  <script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <script src="../../site_libs/header-attrs-2.11/header-attrs.js"></script>
+  <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="../../site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2115,7 +2120,7 @@ d-title {
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Rounding Errors and the 2020 Apportionment","description":"Does apportionment have a small state bias?","authors":[{"author":"Ian McDonald","authorURL":"http://www.ianrmcdonald.com","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-05-10T00:00:00.000+00:00","citationText":"McDonald, 2021"}
+{"title":"Rounding Errors and the 2020 Apportionment","description":"Does apportionment have a small state bias?","authors":[{"author":"Ian McDonald","authorURL":"http://www.ianrmcdonald.com","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-05-10T00:00:00.000-07:00","citationText":"McDonald, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2327,7 +2332,7 @@ Quota_{state} = \frac{\text{State Population}}{\text{US Population}} \times 435
 <p><strong>Since the quota of 3.48 falls below 3.5, the Webster method would round down to 3 seats.</strong></p>
 <p>The geometric mean of two consecutive integers is the square root of their product, and the remainder ranges between .414 and .5.</p>
 <p>For two consecutive whole numbers, <strong>the geometric mean of n and n+1 =</strong> <span class="math display">\[
-\sqrt{n\times(n+1))}
+\sqrt{n\times(n+1)}
 \]</span> The geometric mean of 3 and 4 is</p>
 <p><span class="math display">\[
 \sqrt{3\times4} = \sqrt{12} \approx 3.464
@@ -2335,7 +2340,7 @@ Quota_{state} = \frac{\text{State Population}}{\text{US Population}} \times 435
 <p><strong>Since the quota of 3.48 in the example is greater than 3.464, the Huntington-Hill method rounds <em>up</em> to 4 seats.</strong></p>
 <p>The Huntington-Hill method reduces the likelihood of the Alabama Paradox and the Population Paradox, even though the difference between the arithmetic vs. geometric means goes away as the number of seats increases and the geometric mean approaches <span class="math inline">\((n + .5)\)</span> But the difference between arithmetic vs. geometric means for states with smaller numbers of seats can be significant. In the figure below, the shaded region represents the gap.</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure"><span id="fig:unnamed-chunk-3"></span>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-3"></span>
 <img src="Apportion_2020_v1_files/figure-html5/unnamed-chunk-3-1.png" alt="Rounding thresholds for Webster and Huntington-Hill methods.  Quotas with fractional remainders in the shaded region are rounded *down* for Webster and *up* for Huntington-Hill, the method currently in use. The red dot places our example of a 3.48 quota.  The shaded region on the left shows the small-state bias in  Huntington-Hill." width="624" />
 <p class="caption">
 Figure 1: Rounding thresholds for Webster and Huntington-Hill methods. Quotas with fractional remainders in the shaded region are rounded <em>down</em> for Webster and <em>up</em> for Huntington-Hill, the method currently in use. The red dot places our example of a 3.48 quota. The shaded region on the left shows the small-state bias in Huntington-Hill.
@@ -2347,7 +2352,7 @@ Figure 1: Rounding thresholds for Webster and Huntington-Hill methods. Quotas wi
 <p>To fix the problem, Huntington-Hill reduces the total seat count in the same way we saw in the three-state example: gradually increasing the US population denominator used to determine states’ quotas. Eventually, some states above the rounding threshold will drop below it. Thus, two states will lose a representative, which gets us to 435.</p>
 <p>The two states that lost seats after this adjustment are Ohio and New York.</p>
 <p>Increasing the US population denominator by 794,110 reduces the seat total from 437 to 435, and the quotas for Ohio and New York were close enough to their respective geometric means that they lost a seat they would have otherwise received from simple rounding.</p>
-<p>Several smaller state had quotas with smaller fractional remainders than New York and Ohio, but their allocations based on simple rounding were unscathed. Montana won a second seat despite its small 1.43 quota, and Idaho nearly won a third seat even with a quota of 2.42. <strong>Rounding up is more likely for small states in a formula based on the geometric mean.</strong></p>
+<p>Several smaller states had quotas with smaller fractional remainders than New York and Ohio, but their allocations based on simple rounding were unscathed. Montana won a second seat despite its small 1.43 quota, and Idaho nearly won a third seat even with a quota of 2.42. <strong>Rounding up is more likely for small states in a formula based on the geometric mean.</strong></p>
 <p>The Webster method gets 2020 right on the first try with a sum of 435. That method assigns Montana and Rhode Island only 1 seat each, while New York gets 26 and Ohio gets 16. Sometimes both of these formulas gets to 435 without any adjustment, and sometimes they don’t.</p>
 <p>The version of the Huntington-Hill formula documented by the U.S. Census (and described at the Census press conference) adapts this logic in a clever way. That version, named the <em>Method of Equal Proportions</em>, generates a sequence that assigns seats by number after one seat is allocated to all 50 states, from 51 to 435. The result is identical to the rounding and adjusting process I described, and explained more completely in an addendum below.<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a></p>
 <h3 id="since-huntington-hill-was-adopted-how-many-states-have-been-penalized-as-much-as-new-york-and-ohio-in-the-2020-apportionment">Since Huntington-Hill was adopted, how many states have been penalized as much as New York and Ohio in the 2020 apportionment?</h3>
@@ -2590,7 +2595,7 @@ Figure 1: Rounding thresholds for Webster and Huntington-Hill methods. Quotas wi
 </table>
 </div>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure"><span id="fig:unnamed-chunk-6"></span>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-6"></span>
 <img src="Apportion_2020_v1_files/figure-html5/unnamed-chunk-6-1.png" alt="State quotas vs. fractional remainder of seat allocations.  Positive seats-minus-quota means the formula rounded up, and negative seats-minus-quota means it rounded down. The beneficiaries of a significantly positive rounding are less populous states." width="624" />
 <p class="caption">
 Figure 2: State quotas vs. fractional remainder of seat allocations. Positive seats-minus-quota means the formula rounded up, and negative seats-minus-quota means it rounded down. The beneficiaries of a significantly positive rounding are less populous states.
@@ -2773,7 +2778,7 @@ Figure 2: State quotas vs. fractional remainder of seat allocations. Positive s
 </table>
 </div>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure"><span id="fig:unnamed-chunk-9"></span>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-9"></span>
 <img src="Apportion_2020_v1_files/figure-html5/unnamed-chunk-9-1.png" alt="Instances since 1940 when Huntington-Hill and Webster assign different results by state and year" width="624" />
 <p class="caption">
 Figure 3: Instances since 1940 when Huntington-Hill and Webster assign different results by state and year
@@ -2983,11 +2988,13 @@ Figure 3: Instances since 1940 when Huntington-Hill and Webster assign different
 }</pre>
 </div>
 <!--/radix_placeholder_appendices-->
-<!--radix_placeholder_navigation_after_body-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<!--radix_placeholder_navigation_after_body--><html><body>
 <div class="distill-site-nav distill-site-footer">
-  <p>©2020 - Website creator Sebastian Carl (Twitter: <a href="https://twitter.com/mrcaseb">@mrcaseb</a>)</p>
+<p>Â©2020 - Website creator Sebastian Carl (Twitter: <a href="https://twitter.com/mrcaseb">@mrcaseb</a>)</p>
 </div>
 <!--/radix_placeholder_navigation_after_body-->
+</body></html>
 
 
 </body>
