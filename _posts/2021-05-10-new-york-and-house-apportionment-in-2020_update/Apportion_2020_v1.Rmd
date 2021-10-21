@@ -134,7 +134,7 @@ The geometric mean of two consecutive integers is the square root of their produ
 
 For two consecutive whole numbers, **the geometric mean of n and n+1 =**
 $$
-\sqrt{n\times(n+1))}
+\sqrt{n\times(n+1)}
 $$
 The geometric mean of 3 and 4 is 
 
@@ -176,7 +176,7 @@ The two states that lost seats after this adjustment are Ohio and New York.
 
 Increasing the US population denominator by 794,110 reduces the seat total from 437 to 435, and the quotas for Ohio and New York were close enough to their respective geometric means that they lost a seat they would have otherwise received from simple rounding.
 
-Several smaller state had quotas with smaller fractional remainders than New York and Ohio, but their allocations based on simple rounding were unscathed. Montana won a second seat despite its small 1.43 quota, and Idaho nearly won a third seat even with a quota of 2.42. **Rounding up is more likely for small states in a formula based on the geometric mean.**
+Several smaller states had quotas with smaller fractional remainders than New York and Ohio, but their allocations based on simple rounding were unscathed. Montana won a second seat despite its small 1.43 quota, and Idaho nearly won a third seat even with a quota of 2.42. **Rounding up is more likely for small states in a formula based on the geometric mean.**
 
 The Webster method gets 2020 right on the first try with a sum of 435. That method assigns Montana and Rhode Island only 1 seat each, while New York gets 26 and Ohio gets 16.  Sometimes both of these formulas gets to 435 without any adjustment, and sometimes they don't.  
 
@@ -194,7 +194,7 @@ Notice that 13 of these 17 unlucky seat allocations had came from states with se
 
 ```{r echo=FALSE}
 
-load(file = "/Users/irm16/Dropbox/1G Publishing/irm_2021/my_work_space.RData")
+load(file = "~/Dropbox/1G Publishing/irm_2021/my_work_space.RData")
 
 library(tidyverse)
 library(tidycensus)
