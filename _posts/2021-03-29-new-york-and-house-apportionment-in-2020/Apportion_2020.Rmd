@@ -135,7 +135,7 @@ The Huntington-Hill formula ignores the .5 rounding threshold and instead uses t
 
 $$
 \text{For two consecutive whole numbers, the geometric mean =} 
-\sqrt{n\times(n+1))}
+\sqrt{n\times(n+1)}
 $$
 
 If the quota exceeds the geometric mean, we round up, and if not, we round down.
